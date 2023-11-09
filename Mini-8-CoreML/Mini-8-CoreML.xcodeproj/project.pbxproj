@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF4A3D092AFD607700BC3E28 /* DogSkinDiseaseImageClassification 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DF4A3D082AFD607700BC3E28 /* DogSkinDiseaseImageClassification 1.mlmodel */; };
+		DF4A3D0A2AFD607700BC3E28 /* DogSkinDiseaseImageClassification 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DF4A3D082AFD607700BC3E28 /* DogSkinDiseaseImageClassification 1.mlmodel */; };
+		DF4A3D0B2AFD607700BC3E28 /* DogSkinDiseaseImageClassification 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DF4A3D082AFD607700BC3E28 /* DogSkinDiseaseImageClassification 1.mlmodel */; };
 		DF6537202AF1A10200B482DD /* Mini_8_CoreMLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65371F2AF1A10200B482DD /* Mini_8_CoreMLApp.swift */; };
 		DF6537222AF1A10200B482DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6537212AF1A10200B482DD /* ContentView.swift */; };
 		DF6537242AF1A10300B482DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF6537232AF1A10300B482DD /* Assets.xcassets */; };
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF4A3D082AFD607700BC3E28 /* DogSkinDiseaseImageClassification 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "DogSkinDiseaseImageClassification 1.mlmodel"; path = "../../../../../teste CoreMl/DogSkinDiseaseImageClassification 1.mlmodel"; sourceTree = "<group>"; };
 		DF65371C2AF1A10200B482DD /* Mini-8-CoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-8-CoreML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF65371F2AF1A10200B482DD /* Mini_8_CoreMLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini_8_CoreMLApp.swift; sourceTree = "<group>"; };
 		DF6537212AF1A10200B482DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +75,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF4A3D052AFD600C00BC3E28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF6537212AF1A10200B482DD /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DF4A3D062AFD601500BC3E28 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DF4A3D072AFD602100BC3E28 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF4A3D082AFD607700BC3E28 /* DogSkinDiseaseImageClassification 1.mlmodel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DF6537132AF1A10200B482DD = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				DF65371F2AF1A10200B482DD /* Mini_8_CoreMLApp.swift */,
-				DF6537212AF1A10200B482DD /* ContentView.swift */,
+				DF4A3D072AFD602100BC3E28 /* Model */,
+				DF4A3D062AFD601500BC3E28 /* ViewModel */,
+				DF4A3D052AFD600C00BC3E28 /* View */,
 				DF6537232AF1A10300B482DD /* Assets.xcassets */,
 				DF6537252AF1A10300B482DD /* Preview Content */,
 			);
@@ -257,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4A3D092AFD607700BC3E28 /* DogSkinDiseaseImageClassification 1.mlmodel in Sources */,
 				DF6537222AF1A10200B482DD /* ContentView.swift in Sources */,
 				DF6537202AF1A10200B482DD /* Mini_8_CoreMLApp.swift in Sources */,
 			);
@@ -266,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4A3D0A2AFD607700BC3E28 /* DogSkinDiseaseImageClassification 1.mlmodel in Sources */,
 				DF6537312AF1A10300B482DD /* Mini_8_CoreMLTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4A3D0B2AFD607700BC3E28 /* DogSkinDiseaseImageClassification 1.mlmodel in Sources */,
 				DF65373D2AF1A10300B482DD /* Mini_8_CoreMLUITestsLaunchTests.swift in Sources */,
 				DF65373B2AF1A10300B482DD /* Mini_8_CoreMLUITests.swift in Sources */,
 			);
