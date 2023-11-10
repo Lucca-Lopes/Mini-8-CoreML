@@ -9,13 +9,18 @@ import SwiftUI
 
 struct DiseasesDescriptionView: View {
     @Environment (\.screenSize) var screenSize
+    @State var disease: String = "Doença"
+    @State var accuracy: String = "0%"
+    @State var description: String = "Descrição aqui"
+    @State var recommendations: String = "Recomendações aqui"
     
     var body: some View {
+        
         //view de descrição da doença do cachorro
         VStack(alignment:.leading){
             //nome da doença e acurácia
             HStack(alignment: .center){
-                Text("Doença")
+                Text(disease)
                     .font(.system(size: 22, weight: .semibold))
                     .foregroundColor(Color("labelColor"))
                 
@@ -33,13 +38,14 @@ struct DiseasesDescriptionView: View {
             Divider()
                 .background(Color("labelColor"))
             
+            //TODO: localizar títulos para inglês e português
             //descrição
             Text("Descrição")
                 .font(.system(size: 20, weight: .semibold))
                 .foregroundColor(Color("labelColor"))
                 .padding(.vertical)
 
-            Text("Worem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. ")
+            Text(description)
                 .font(.system(size: 17, weight: .regular))
                 .foregroundColor(Color("labelColor"))
             
@@ -49,13 +55,13 @@ struct DiseasesDescriptionView: View {
                 .foregroundColor(Color("labelColor"))
                 .padding(.vertical)
 
-            Text("Worem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. ")
+            Text(recommendations)
                 .font(.system(size: 17, weight: .regular))
                 .foregroundColor(Color("labelColor"))
             
         }
         .padding(.horizontal)
-        .frame(width: screenSize.width, height: screenSize.height, alignment: .top)
+        .frame(width: screenSize.width, alignment: .top)
         .background{
             BackgroundView()
         }

@@ -11,12 +11,9 @@ struct BackgroundView: View {
     @Environment (\.screenSize) var screenSize
     
     var body: some View {
-
             Image("backgroundImage")
                 .resizable()
                 .scaledToFill()
-//                .frame(width: screenSize.width, height: screenSize.height)
                 .background(Color("backgroundColor"))
-        
         }
 }

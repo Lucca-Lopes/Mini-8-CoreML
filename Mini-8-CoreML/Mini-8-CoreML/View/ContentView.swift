@@ -14,7 +14,6 @@ struct ContentView: View {
                 .background{
                     BackgroundView()
                 }
-            
         }
         
     }
