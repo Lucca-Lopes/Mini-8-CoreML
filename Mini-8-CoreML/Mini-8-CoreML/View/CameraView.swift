@@ -17,10 +17,10 @@ struct CameraView: View {
         }
         else {
             CameraManeger(image: $image)
-                .onChange(of: image) {
-                    vm.importedImage = image
+                .onChange(of: image, perform: { value in
+                    vm.importedImage = value
                     vm.onChangeImage()
-                }
+                })
         }
     }
 }

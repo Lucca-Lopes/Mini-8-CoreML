@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct CameraManeger: UIViewControllerRepresentable {
     @Environment(\.presentationMode) var presentationMode
     @Binding var image: UIImage?

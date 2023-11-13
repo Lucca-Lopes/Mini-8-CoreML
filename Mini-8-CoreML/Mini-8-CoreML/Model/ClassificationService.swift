@@ -6,8 +6,6 @@
 //
 
 import Vision
-import VisionKit
-import UIKit
 import SwiftUI
 
 protocol ClassificationServiceProviding {
