@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    init(){
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color("labelColor"))]
+    }
+    
     var body: some View {
-        VStack{
-            DiseasesDescriptionView()
-                .background{
-                    BackgroundView()
-                }
+        NavigationStack{
+            InfoView()
         }
-        
     }
 }
 
