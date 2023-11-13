@@ -10,6 +10,7 @@
 		40423A222B029ACE00AF4A40 /* InfoButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40423A212B029ACE00AF4A40 /* InfoButtonComponent.swift */; };
 		40423A242B029ADA00AF4A40 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40423A232B029ADA00AF4A40 /* InfoView.swift */; };
 		40423A262B029F3200AF4A40 /* InfoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40423A252B029F3200AF4A40 /* InfoTextView.swift */; };
+		40423A292B02B46100AF4A40 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40423A2B2B02B46100AF4A40 /* Localizable.strings */; };
 		40FD79662AFD6E4800F4C040 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FD79652AFD6E4800F4C040 /* BackgroundView.swift */; };
 		40FD79682AFD716D00F4C040 /* DiseasesDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FD79672AFD716D00F4C040 /* DiseasesDescriptionView.swift */; };
 		DF6537202AF1A10200B482DD /* Mini_8_CoreMLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65371F2AF1A10200B482DD /* Mini_8_CoreMLApp.swift */; };
@@ -44,6 +45,8 @@
 		40423A212B029ACE00AF4A40 /* InfoButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoButtonComponent.swift; sourceTree = "<group>"; };
 		40423A232B029ADA00AF4A40 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		40423A252B029F3200AF4A40 /* InfoTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTextView.swift; sourceTree = "<group>"; };
+		40423A2A2B02B46100AF4A40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		40423A2C2B02B46600AF4A40 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		40FD79652AFD6E4800F4C040 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		40FD79672AFD716D00F4C040 /* DiseasesDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseasesDescriptionView.swift; sourceTree = "<group>"; };
 		DF65371C2AF1A10200B482DD /* Mini-8-CoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-8-CoreML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +119,7 @@
 		DF6537132AF1A10200B482DD = {
 			isa = PBXGroup;
 			children = (
+				40423A2B2B02B46100AF4A40 /* Localizable.strings */,
 				DF65371E2AF1A10200B482DD /* Mini-8-CoreML */,
 				DF65372F2AF1A10300B482DD /* Mini-8-CoreMLTests */,
 				DF6537392AF1A10300B482DD /* Mini-8-CoreMLUITests */,
@@ -266,6 +270,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = DF6537132AF1A10200B482DD;
 			productRefGroup = DF65371D2AF1A10200B482DD /* Products */;
@@ -285,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF6537272AF1A10300B482DD /* Preview Assets.xcassets in Resources */,
+				40423A292B02B46100AF4A40 /* Localizable.strings in Resources */,
 				DF6537242AF1A10300B482DD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +359,18 @@
 			targetProxy = DF6537372AF1A10300B482DD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		40423A2B2B02B46100AF4A40 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40423A2A2B02B46100AF4A40 /* en */,
+				40423A2C2B02B46600AF4A40 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DF65373E2AF1A10300B482DD /* Debug */ = {

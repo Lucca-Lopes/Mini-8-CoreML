@@ -9,10 +9,10 @@ import SwiftUI
 
 struct DiseasesDescriptionView: View {
     @Environment (\.screenSize) var screenSize
-    @State var disease: String = "Doença"
-    @State var accuracy: String = "0%"
-    @State var description: String = "Descrição aqui"
-    @State var recommendations: String = "Recomendações aqui"
+    @State var disease: String
+    @State var accuracy: String
+    @State var description: String
+    @State var recommendations: String
     
     var body: some View {
         
@@ -40,7 +40,7 @@ struct DiseasesDescriptionView: View {
             
             //TODO: localizar títulos para inglês e português
             //descrição
-            Text("Descrição")
+            Text("description")
                 .font(.system(size: 20, weight: .semibold))
                 .foregroundColor(Color("labelColor"))
                 .padding(.vertical)
@@ -50,7 +50,7 @@ struct DiseasesDescriptionView: View {
                 .foregroundColor(Color("labelColor"))
             
             //recomendações
-            Text("Recomendações")
+            Text("recommendation")
                 .font(.system(size: 20, weight: .semibold))
                 .foregroundColor(Color("labelColor"))
                 .padding(.vertical)

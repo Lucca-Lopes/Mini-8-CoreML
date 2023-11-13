@@ -11,8 +11,8 @@ struct InfoTextView: View {
     @Environment(\.screenSize) var screenSize
     
     //variáveis que recebem o texto e título
-    var infoText: String
-    var infoTitle: String
+    var infoText: LocalizedStringKey
+    var infoTitle: LocalizedStringKey
     
     var body: some View {
         VStack(alignment: .leading){

@@ -10,7 +10,7 @@ import SwiftUI
 struct InfoButtonComponent: View {
     @Environment (\.screenSize) var screenSize
     var icon: String
-    var title: String
+    var title: LocalizedStringKey
     
     var body: some View {
         //botões da tela de info
@@ -18,7 +18,7 @@ struct InfoButtonComponent: View {
                 //background
                 Capsule()
                     .fill(Color("AccentColor"))
-                    .frame(width: screenSize.width * 0.85, height: screenSize.height * 0.1)
+                    .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.1)
                     .shadow(radius: 10, x: 0, y: 6)
 
                 HStack{
@@ -27,7 +27,7 @@ struct InfoButtonComponent: View {
                         .padding(.trailing)
                     Text(title)
                 }
-                .font(.system(size: 20, weight: .semibold))
+                .font(.system(size: 18, weight: .semibold))
                 .foregroundColor(Color("labelColor"))
                 .frame(width: screenSize.width * 0.65 , height: screenSize.height * 0.08, alignment: .leading)
             }
