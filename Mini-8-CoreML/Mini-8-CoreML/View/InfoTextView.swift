@@ -23,5 +23,7 @@ struct InfoTextView: View {
                 .multilineTextAlignment(.leading)
         }
         .navigationTitle(infoTitle)
+        .frame(width: screenSize.width, height: screenSize.height)
+        .background(Color("backgroundColor"))
     }
 }

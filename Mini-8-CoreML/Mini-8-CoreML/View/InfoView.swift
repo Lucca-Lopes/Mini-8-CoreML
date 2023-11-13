@@ -28,7 +28,9 @@ struct InfoView: View {
             
             Spacer()
         }
+        .frame(width: screenSize.width)
         .padding(.top, 30)
         .navigationTitle("info")
+        .background(Color("backgroundColor"))
     }
 }

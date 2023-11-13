@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     init(){
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color("labelColor"))]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color("labelColor")), .font: UIFont.systemFont(ofSize: 30, weight: .bold)]
     }
     
     var body: some View {
