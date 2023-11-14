@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF210EA02B040FAF00EF47C1 /* LiveCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF210E9F2B040FAF00EF47C1 /* LiveCameraView.swift */; };
 		DF6537202AF1A10200B482DD /* Mini_8_CoreMLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65371F2AF1A10200B482DD /* Mini_8_CoreMLApp.swift */; };
 		DF6537222AF1A10200B482DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6537212AF1A10200B482DD /* ContentView.swift */; };
 		DF6537242AF1A10300B482DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF6537232AF1A10300B482DD /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF210E9F2B040FAF00EF47C1 /* LiveCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCameraView.swift; sourceTree = "<group>"; };
 		DF65371C2AF1A10200B482DD /* Mini-8-CoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-8-CoreML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF65371F2AF1A10200B482DD /* Mini_8_CoreMLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini_8_CoreMLApp.swift; sourceTree = "<group>"; };
 		DF6537212AF1A10200B482DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				DFEB08DE2AFD6FD400B0E66A /* CameraManager.swift */,
 				DFEB08E22AFD70A600B0E66A /* CameraView.swift */,
 				DFEB08E52AFD758800B0E66A /* DiagnosticoView.swift */,
+				DF210E9F2B040FAF00EF47C1 /* LiveCameraView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				DFEB08DD2AFD6D4400B0E66A /* DescriptionSheet.swift in Sources */,
 				DFEB08DF2AFD6FD400B0E66A /* CameraManager.swift in Sources */,
 				DFEB08D82AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel in Sources */,
+				DF210EA02B040FAF00EF47C1 /* LiveCameraView.swift in Sources */,
 				DF6537222AF1A10200B482DD /* ContentView.swift in Sources */,
 				DF6537202AF1A10200B482DD /* Mini_8_CoreMLApp.swift in Sources */,
 				DFEB08E62AFD758800B0E66A /* DiagnosticoView.swift in Sources */,
