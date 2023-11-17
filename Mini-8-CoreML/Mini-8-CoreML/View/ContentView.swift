@@ -15,7 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack{
-            InfoView()
+            CapturedImageView(image: Image("cachorro"), photo: UIImage(named: "cachorro")!, disease: "", accuracy: "", description: "", recommendations: "")
         }
     }
 }
