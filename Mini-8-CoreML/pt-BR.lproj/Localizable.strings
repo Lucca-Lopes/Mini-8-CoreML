@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  Mini-8-CoreML
+
+  Created by Aline Reis Silva on 13/11/23.
+  
+*/
+
+//MARK: Info page
+
+"info" = "Informações";
+
+"about" = "Sobre";
+
+"aboutText"= "";
+
+"diseases" = "Doenças";
+
+"diseasesText" = "";
+
+"privacy" = "Políticas de privacidade";
+
+"privacyText"= "";
+
+//MARK: Description page
+
+"description" = "Descrição";
+
+"recommendation" = "Recomendações";

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40423A222B029ACE00AF4A40 /* InfoButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40423A212B029ACE00AF4A40 /* InfoButtonComponent.swift */; };
+		40423A242B029ADA00AF4A40 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40423A232B029ADA00AF4A40 /* InfoView.swift */; };
+		40423A262B029F3200AF4A40 /* InfoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40423A252B029F3200AF4A40 /* InfoTextView.swift */; };
+		40423A292B02B46100AF4A40 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40423A2B2B02B46100AF4A40 /* Localizable.strings */; };
+		40423A2E2B03F29800AF4A40 /* CapturedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40423A2D2B03F29800AF4A40 /* CapturedImageView.swift */; };
+		40FD79662AFD6E4800F4C040 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FD79652AFD6E4800F4C040 /* BackgroundView.swift */; };
 		DF6537202AF1A10200B482DD /* Mini_8_CoreMLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65371F2AF1A10200B482DD /* Mini_8_CoreMLApp.swift */; };
 		DF6537222AF1A10200B482DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6537212AF1A10200B482DD /* ContentView.swift */; };
 		DF6537242AF1A10300B482DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF6537232AF1A10300B482DD /* Assets.xcassets */; };
@@ -16,7 +22,6 @@
 		DF65373D2AF1A10300B482DD /* Mini_8_CoreMLUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65373C2AF1A10300B482DD /* Mini_8_CoreMLUITestsLaunchTests.swift */; };
 		DFEB08D82AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08D72AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel */; };
 		DFEB08DA2AFD6CF300B0E66A /* ClassificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08D92AFD6CF300B0E66A /* ClassificationViewModel.swift */; };
-		DFEB08DD2AFD6D4400B0E66A /* DescriptionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08DC2AFD6D4400B0E66A /* DescriptionSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40423A212B029ACE00AF4A40 /* InfoButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoButtonComponent.swift; sourceTree = "<group>"; };
+		40423A232B029ADA00AF4A40 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		40423A252B029F3200AF4A40 /* InfoTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTextView.swift; sourceTree = "<group>"; };
+		40423A2A2B02B46100AF4A40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		40423A2C2B02B46600AF4A40 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		40423A2D2B03F29800AF4A40 /* CapturedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturedImageView.swift; sourceTree = "<group>"; };
+		40FD79652AFD6E4800F4C040 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		DF65371C2AF1A10200B482DD /* Mini-8-CoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-8-CoreML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF65371F2AF1A10200B482DD /* Mini_8_CoreMLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini_8_CoreMLApp.swift; sourceTree = "<group>"; };
 		DF6537212AF1A10200B482DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,7 +61,6 @@
 		DF65373C2AF1A10300B482DD /* Mini_8_CoreMLUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini_8_CoreMLUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DFEB08D72AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "DogSkinDiseaseImageClassification 1.mlmodel"; sourceTree = "<group>"; };
 		DFEB08D92AFD6CF300B0E66A /* ClassificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationViewModel.swift; sourceTree = "<group>"; };
-		DFEB08DC2AFD6D4400B0E66A /* DescriptionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +93,9 @@
 			children = (
 				DFEB08DB2AFD6D2D00B0E66A /* Components */,
 				DF6537212AF1A10200B482DD /* ContentView.swift */,
+				40423A232B029ADA00AF4A40 /* InfoView.swift */,
+				40423A252B029F3200AF4A40 /* InfoTextView.swift */,
+				40423A2D2B03F29800AF4A40 /* CapturedImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -105,6 +119,7 @@
 		DF6537132AF1A10200B482DD = {
 			isa = PBXGroup;
 			children = (
+				40423A2B2B02B46100AF4A40 /* Localizable.strings */,
 				DF65371E2AF1A10200B482DD /* Mini-8-CoreML */,
 				DF65372F2AF1A10300B482DD /* Mini-8-CoreMLTests */,
 				DF6537392AF1A10300B482DD /* Mini-8-CoreMLUITests */,
@@ -163,7 +178,8 @@
 		DFEB08DB2AFD6D2D00B0E66A /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				DFEB08DC2AFD6D4400B0E66A /* DescriptionSheet.swift */,
+				40FD79652AFD6E4800F4C040 /* BackgroundView.swift */,
+				40423A212B029ACE00AF4A40 /* InfoButtonComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -249,11 +265,12 @@
 			};
 			buildConfigurationList = DF6537172AF1A10200B482DD /* Build configuration list for PBXProject "Mini-8-CoreML" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = "pt-BR";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = DF6537132AF1A10200B482DD;
 			productRefGroup = DF65371D2AF1A10200B482DD /* Products */;
@@ -273,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF6537272AF1A10300B482DD /* Preview Assets.xcassets in Resources */,
+				40423A292B02B46100AF4A40 /* Localizable.strings in Resources */,
 				DF6537242AF1A10300B482DD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,10 +316,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40423A242B029ADA00AF4A40 /* InfoView.swift in Sources */,
+				40FD79662AFD6E4800F4C040 /* BackgroundView.swift in Sources */,
+				40423A2E2B03F29800AF4A40 /* CapturedImageView.swift in Sources */,
 				DFEB08DA2AFD6CF300B0E66A /* ClassificationViewModel.swift in Sources */,
-				DFEB08DD2AFD6D4400B0E66A /* DescriptionSheet.swift in Sources */,
+				40423A262B029F3200AF4A40 /* InfoTextView.swift in Sources */,
 				DFEB08D82AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel in Sources */,
 				DF6537222AF1A10200B482DD /* ContentView.swift in Sources */,
+				40423A222B029ACE00AF4A40 /* InfoButtonComponent.swift in Sources */,
 				DF6537202AF1A10200B482DD /* Mini_8_CoreMLApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +359,18 @@
 			targetProxy = DF6537372AF1A10300B482DD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		40423A2B2B02B46100AF4A40 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40423A2A2B02B46100AF4A40 /* en */,
+				40423A2C2B02B46600AF4A40 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DF65373E2AF1A10300B482DD /* Debug */ = {
@@ -466,7 +500,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini-8-CoreML/Preview Content\"";
-				DEVELOPMENT_TEAM = RRUDNBUBWM;
+				DEVELOPMENT_TEAM = 7UT3KQHPCK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -474,6 +508,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -495,7 +530,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini-8-CoreML/Preview Content\"";
-				DEVELOPMENT_TEAM = RRUDNBUBWM;
+				DEVELOPMENT_TEAM = 7UT3KQHPCK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -503,6 +538,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
