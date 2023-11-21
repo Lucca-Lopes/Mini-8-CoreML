@@ -16,7 +16,7 @@ struct DiagnosticoView: View {
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
-            Text(vm.classifications)
+            Text(vm.classification)
         }
     }
 }

@@ -15,7 +15,8 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack{
-            CapturedImageView(image: Image("cachorro"), photo: UIImage(named: "cachorro")!, disease: "", accuracy: "", description: "", recommendations: "")
+            CameraView()
+//            CapturedImageView(image: Image("cachorro"), photo: UIImage(named: "cachorro")!, disease: "", accuracy: "", description: "", recommendations: "")
         }
     }
 }

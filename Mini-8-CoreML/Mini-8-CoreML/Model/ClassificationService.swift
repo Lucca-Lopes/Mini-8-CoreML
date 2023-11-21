@@ -10,6 +10,7 @@ import SwiftUI
 
 protocol ClassificationServiceProviding {
     var classificationsResultPub: Published<String>.Publisher { get }
+    var accuraciesResultPub: Published<String>.Publisher { get }
     func updateClassifications(for image: UIImage)
 }
 
@@ -19,10 +20,13 @@ final class ClassificationService: ClassificationServiceProviding {
     @Published private var classifications: String = ""
     var classificationsResultPub: Published<String>.Publisher { $classifications }
     
+    @Published private var accuracies: String = ""
+    var accuraciesResultPub: Published<String>.Publisher { $accuracies }
+    
     /// - Tag: MLModelSetup
     lazy var classificationRequest: `VNCoreMLRequest` = {
         do {
-            let model = try VNCoreMLModel(for: DogSkinDiseaseImageClassification_1(configuration: MLModelConfiguration()).model)
+            let model = try VNCoreMLModel(for: DogSkinLesion(configuration: MLModelConfiguration()).model)
             
             let request = VNCoreMLRequest(model: model, completionHandler: { [weak self] request, error in
                 self?.processClassifications(for: request, error: error)
@@ -44,6 +48,7 @@ final class ClassificationService: ClassificationServiceProviding {
         
         /// Clear old classifications
         self.classifications = ""
+        self.accuracies = ""
         
         Task{
             let handler = VNImageRequestHandler(ciImage: ciImage, orientation: orientation)
@@ -70,13 +75,22 @@ final class ClassificationService: ClassificationServiceProviding {
                 // do nothing
             } else {
                 // Display top classifications ranked by confidence in the UI.
-                let topClassifications = classifications.prefix(5)
+                let topClassifications = classifications.prefix(1)
                 let descriptions = topClassifications.map { classification in
                     // Formats the classification for display; e.g. "(0.37) cliff, drop, drop-off".
-                    return String(format: "(%.2f) %@\n", classification.confidence, classification.identifier)
+                    return String(format: "\(classification.identifier)")
                 }
                 
-                self.classifications = descriptions.joined(separator: " ")
+                let accuracies = topClassifications.map { classification in
+                    // Formats the classification for display; e.g. "(0.37) cliff, drop, drop-off".
+                    let text = String(format: "\(classification.confidence * 100)")
+                    return text.prefix(2)
+                }
+                
+                print("Classificacoes - \(descriptions)")
+                print("Accuracies - \(accuracies)")
+                self.classifications = descriptions.joined()
+                self.accuracies = accuracies.joined()
             }
         }
     }

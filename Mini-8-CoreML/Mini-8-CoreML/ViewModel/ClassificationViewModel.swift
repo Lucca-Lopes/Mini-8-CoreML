@@ -5,9 +5,8 @@
 //  Created by Lucca Lopes on 09/11/23.
 //
 
-import Foundation
 import Combine
-import UIKit
+import SwiftUI
 
 @MainActor
 final class ClassificationViewModel: ObservableObject {
@@ -15,7 +14,10 @@ final class ClassificationViewModel: ObservableObject {
     
     @Published var importedImage: UIImage? = nil
     
-    @Published var classifications: String = ""
+    @Published var classification: LocalizedStringKey = ""
+    @Published var accuracy: String = ""
+    @Published var description: LocalizedStringKey = ""
+    @Published var recommendation: LocalizedStringKey = ""
     
     let service: ClassificationServiceProviding
     
@@ -28,15 +30,28 @@ final class ClassificationViewModel: ObservableObject {
         self.importedImage = image
         self.service = service
         
-        self.subscribe()
+        self.subscribeClassifications()
+        self.subscribeAccuracies()
         self.onChangeImage()
     }
     
-    func subscribe() {
+    func subscribeClassifications() {
         self.service.classificationsResultPub
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] newClassifications in
-                self?.classifications = newClassifications
+            .sink { [weak self] newClassification in
+                self?.classification = self?.adequateClassification(classification: newClassification) ?? ""
+                self?.description = self?.updateDescription(classification: newClassification) ?? ""
+                self?.recommendation = self?.updateRecomendation(classification: newClassification) ?? ""
+                
+            }
+            .store(in: &subscribers)
+    }
+    
+    func subscribeAccuracies(){
+        self.service.accuraciesResultPub
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] newAccuracies in
+                self?.accuracy = newAccuracies
             }
             .store(in: &subscribers)
     }
@@ -44,6 +59,45 @@ final class ClassificationViewModel: ObservableObject {
     func onChangeImage() {
         guard let image = importedImage else { return }
         service.updateClassifications(for: image)
+    }
+    
+    func adequateClassification(classification: String) -> LocalizedStringKey {
+        switch classification {
+        case "Circular_Alopecia":
+            return "circularAlopecia"
+        case "Keratosis":
+            return "keratosis"
+        case "Skin_Lesions":
+            return "skinLesion"
+        default:
+            return "healthy"
+        }
+    }
+    
+    func updateDescription(classification: String) -> LocalizedStringKey {
+        switch classification {
+        case "Circular_Alopecia":
+            return "circularAlopeciaDescription"
+        case "Keratosis":
+            return "keratosisDescription"
+        case "Skin_Lesions":
+            return "skinLesionDescription"
+        default:
+            return "healthyDescription"
+        }
+    }
+    
+    func updateRecomendation(classification: String) -> LocalizedStringKey {
+        switch classification {
+        case "Circular_Alopecia":
+            return "circularAlopeciaRecomendation"
+        case "Keratosis":
+            return "keratosisRecomendation"
+        case "Skin_Lesions":
+            return "skinLesionRecomendation"
+        default:
+            return "healthyRecomendation"
+        }
     }
 }
 

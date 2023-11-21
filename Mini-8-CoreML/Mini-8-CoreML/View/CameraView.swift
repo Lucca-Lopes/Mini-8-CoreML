@@ -12,7 +12,7 @@ struct CameraView: View {
     @State var image: UIImage?
     var body: some View {
         if vm.importedImage != nil {
-            DiagnosticoView()
+            CapturedImageView()
                 .environmentObject(vm)
         }
         else {

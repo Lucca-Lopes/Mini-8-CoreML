@@ -8,20 +8,15 @@
 import SwiftUI
 
 struct CapturedImageView: View {
+    @EnvironmentObject var vm: ClassificationViewModel
     @Environment (\.dismiss) var dismiss
     @Environment (\.screenSize) var screenSize
     
-    var image: Image
-    @State var photo: UIImage
-    @State var disease: String
-    @State var accuracy: String
-    @State var description: String
-    @State var recommendations: String
-    
-    
+    @State var exportedView: UIImage? = nil
+        
     var body: some View {
         VStack{
-            image
+            Image(uiImage: (vm.importedImage) ?? UIImage(named: "cachorro")!)
                 .resizable()
                 .scaledToFill()
                 .frame(width: screenSize.width, height: screenSize.height * 0.5)
@@ -31,13 +26,13 @@ struct CapturedImageView: View {
             VStack{
                 //nome da doença e acurácia
                 HStack(alignment: .center){
-                    Text(disease)
+                    Text(vm.classification)
                         .font(.system(size: 22, weight: .semibold))
                         .foregroundColor(Color("labelColor"))
                     
                     Spacer()
                     
-                    Text("0%")
+                    Text("\(vm.accuracy)%")
                         .font(.system(size: 22, weight: .semibold))
                         .foregroundColor(Color("labelColor"))
                 
@@ -58,7 +53,7 @@ struct CapturedImageView: View {
                         .foregroundColor(Color("labelColor"))
                         .padding(.vertical)
                     
-                    Text(description)
+                    Text(vm.description)
                         .font(.system(size: 17, weight: .regular))
                         .foregroundColor(Color("labelColor"))
                         .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.15, alignment: .leading)
@@ -69,7 +64,7 @@ struct CapturedImageView: View {
                         .foregroundColor(Color("labelColor"))
                         .padding(.vertical)
                     
-                    Text(recommendations)
+                    Text(vm.recommendation)
                         .font(.system(size: 17, weight: .regular))
                         .foregroundColor(Color("labelColor"))
                         .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.15, alignment: .leading)
@@ -90,16 +85,17 @@ struct CapturedImageView: View {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button{
                     dismiss()
+                    vm.importedImage = nil
                 } label: {
                     Image(systemName: "chevron.backward")
                         .fontWeight(.bold)
                 }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                ShareLink(item: Image(uiImage: photo), preview: SharePreview("Teste", image: Image(uiImage: photo)))
+                ShareLink(item: Image(uiImage: self.exportedView ?? UIImage()), preview: SharePreview("Teste", image: Image(uiImage: self.exportedView ?? UIImage())))
                     .fontWeight(.bold)
                     .onAppear{
-                        photo = ImageRenderer(content: self.body).uiImage!
+                        self.exportedView = ImageRenderer(content: self.body).uiImage!
                     }
             }
         }
