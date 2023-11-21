@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    init(){
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color("labelColor")), .font: UIFont.systemFont(ofSize: 30, weight: .bold)]
+    }
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack{
+            CapturedImageView(image: Image("cachorro"), photo: UIImage(named: "cachorro")!, disease: "", accuracy: "", description: "", recommendations: "")
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}
