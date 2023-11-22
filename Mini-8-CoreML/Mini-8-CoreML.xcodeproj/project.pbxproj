@@ -13,6 +13,7 @@
 		40423A292B02B46100AF4A40 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40423A2B2B02B46100AF4A40 /* Localizable.strings */; };
 		40423A2E2B03F29800AF4A40 /* CapturedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40423A2D2B03F29800AF4A40 /* CapturedImageView.swift */; };
 		40FD79662AFD6E4800F4C040 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FD79652AFD6E4800F4C040 /* BackgroundView.swift */; };
+		DF210EA02B040FAF00EF47C1 /* LiveCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF210E9F2B040FAF00EF47C1 /* LiveCameraView.swift */; };
 		DF6537202AF1A10200B482DD /* Mini_8_CoreMLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65371F2AF1A10200B482DD /* Mini_8_CoreMLApp.swift */; };
 		DF6537222AF1A10200B482DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6537212AF1A10200B482DD /* ContentView.swift */; };
 		DF6537242AF1A10300B482DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF6537232AF1A10300B482DD /* Assets.xcassets */; };
@@ -22,8 +23,13 @@
 		DF65373D2AF1A10300B482DD /* Mini_8_CoreMLUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65373C2AF1A10300B482DD /* Mini_8_CoreMLUITestsLaunchTests.swift */; };
 		DFAD40F12B0E6DC500B8E240 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAD40F02B0E6DC500B8E240 /* IntroView.swift */; };
 		DFAD40F32B0E6E1300B8E240 /* BotaoProximoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAD40F22B0E6E1300B8E240 /* BotaoProximoView.swift */; };
+		DF70D25B2B0D41B00096F0E5 /* DogSkinLesion.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DF70D25A2B0D41B00096F0E5 /* DogSkinLesion.mlmodel */; };
 		DFEB08D82AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08D72AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel */; };
 		DFEB08DA2AFD6CF300B0E66A /* ClassificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08D92AFD6CF300B0E66A /* ClassificationViewModel.swift */; };
+		DFEB08DF2AFD6FD400B0E66A /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08DE2AFD6FD400B0E66A /* CameraManager.swift */; };
+		DFEB08E32AFD70A600B0E66A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08E22AFD70A600B0E66A /* CameraView.swift */; };
+		DFEB08E62AFD758800B0E66A /* DiagnosticoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08E52AFD758800B0E66A /* DiagnosticoView.swift */; };
+		DFEB08E82AFD7BEA00B0E66A /* ClassificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08E72AFD7BEA00B0E66A /* ClassificationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,20 +57,27 @@
 		40423A2C2B02B46600AF4A40 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		40423A2D2B03F29800AF4A40 /* CapturedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturedImageView.swift; sourceTree = "<group>"; };
 		40FD79652AFD6E4800F4C040 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
-		DF65371C2AF1A10200B482DD /* Mini-8-CoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-8-CoreML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF210E9F2B040FAF00EF47C1 /* LiveCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCameraView.swift; sourceTree = "<group>"; };
 		DF65371F2AF1A10200B482DD /* Mini_8_CoreMLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini_8_CoreMLApp.swift; sourceTree = "<group>"; };
 		DF6537212AF1A10200B482DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DF6537232AF1A10300B482DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF6537262AF1A10300B482DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DF65372C2AF1A10300B482DD /* Mini-8-CoreMLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mini-8-CoreMLTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6537302AF1A10300B482DD /* Mini_8_CoreMLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini_8_CoreMLTests.swift; sourceTree = "<group>"; };
-		DF6537362AF1A10300B482DD /* Mini-8-CoreMLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mini-8-CoreMLUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF65373A2AF1A10300B482DD /* Mini_8_CoreMLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini_8_CoreMLUITests.swift; sourceTree = "<group>"; };
 		DF65373C2AF1A10300B482DD /* Mini_8_CoreMLUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini_8_CoreMLUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DFAD40F02B0E6DC500B8E240 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		DFAD40F22B0E6E1300B8E240 /* BotaoProximoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoProximoView.swift; sourceTree = "<group>"; };
+		DF70D2582B0D3BFE0096F0E5 /* Mini-8-CoreMLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mini-8-CoreMLTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF70D2592B0D3BFE0096F0E5 /* Mini-8-CoreMLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mini-8-CoreMLUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF70D25A2B0D41B00096F0E5 /* DogSkinLesion.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DogSkinLesion.mlmodel; sourceTree = "<group>"; };
+		DFCC82FE2B0D2AF000C8B723 /* Mini-8-CoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-8-CoreML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFEB08D72AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "DogSkinDiseaseImageClassification 1.mlmodel"; sourceTree = "<group>"; };
 		DFEB08D92AFD6CF300B0E66A /* ClassificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationViewModel.swift; sourceTree = "<group>"; };
+		DFEB08DE2AFD6FD400B0E66A /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		DFEB08E22AFD70A600B0E66A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		DFEB08E42AFD735900B0E66A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DFEB08E52AFD758800B0E66A /* DiagnosticoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticoView.swift; sourceTree = "<group>"; };
+		DFEB08E72AFD7BEA00B0E66A /* ClassificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +108,12 @@
 		DF4A3D052AFD600C00BC3E28 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DFEB08DB2AFD6D2D00B0E66A /* Components */,
 				DF6537212AF1A10200B482DD /* ContentView.swift */,
+				DFEB08DB2AFD6D2D00B0E66A /* Components */,
+				DFEB08DE2AFD6FD400B0E66A /* CameraManager.swift */,
+				DFEB08E22AFD70A600B0E66A /* CameraView.swift */,
+				DFEB08E52AFD758800B0E66A /* DiagnosticoView.swift */,
+				DF210E9F2B040FAF00EF47C1 /* LiveCameraView.swift */,
 				40423A232B029ADA00AF4A40 /* InfoView.swift */,
 				40423A252B029F3200AF4A40 /* InfoTextView.swift */,
 				40423A2D2B03F29800AF4A40 /* CapturedImageView.swift */,
@@ -116,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				DFEB08D72AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel */,
+				DF70D25A2B0D41B00096F0E5 /* DogSkinLesion.mlmodel */,
+				DFEB08E72AFD7BEA00B0E66A /* ClassificationService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,23 +146,16 @@
 				DF65371E2AF1A10200B482DD /* Mini-8-CoreML */,
 				DF65372F2AF1A10300B482DD /* Mini-8-CoreMLTests */,
 				DF6537392AF1A10300B482DD /* Mini-8-CoreMLUITests */,
-				DF65371D2AF1A10200B482DD /* Products */,
+				DFCC82FE2B0D2AF000C8B723 /* Mini-8-CoreML.app */,
+				DF70D2582B0D3BFE0096F0E5 /* Mini-8-CoreMLTests.xctest */,
+				DF70D2592B0D3BFE0096F0E5 /* Mini-8-CoreMLUITests.xctest */,
 			);
-			sourceTree = "<group>";
-		};
-		DF65371D2AF1A10200B482DD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DF65371C2AF1A10200B482DD /* Mini-8-CoreML.app */,
-				DF65372C2AF1A10300B482DD /* Mini-8-CoreMLTests.xctest */,
-				DF6537362AF1A10300B482DD /* Mini-8-CoreMLUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		DF65371E2AF1A10200B482DD /* Mini-8-CoreML */ = {
 			isa = PBXGroup;
 			children = (
+				DFEB08E42AFD735900B0E66A /* Info.plist */,
 				DF65371F2AF1A10200B482DD /* Mini_8_CoreMLApp.swift */,
 				DF4A3D072AFD602100BC3E28 /* Model */,
 				DF4A3D062AFD601500BC3E28 /* ViewModel */,
@@ -207,7 +219,7 @@
 			);
 			name = "Mini-8-CoreML";
 			productName = "Mini-8-CoreML";
-			productReference = DF65371C2AF1A10200B482DD /* Mini-8-CoreML.app */;
+			productReference = DFCC82FE2B0D2AF000C8B723 /* Mini-8-CoreML.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DF65372B2AF1A10300B482DD /* Mini-8-CoreMLTests */ = {
@@ -225,7 +237,7 @@
 			);
 			name = "Mini-8-CoreMLTests";
 			productName = "Mini-8-CoreMLTests";
-			productReference = DF65372C2AF1A10300B482DD /* Mini-8-CoreMLTests.xctest */;
+			productReference = DF70D2582B0D3BFE0096F0E5 /* Mini-8-CoreMLTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		DF6537352AF1A10300B482DD /* Mini-8-CoreMLUITests */ = {
@@ -243,7 +255,7 @@
 			);
 			name = "Mini-8-CoreMLUITests";
 			productName = "Mini-8-CoreMLUITests";
-			productReference = DF6537362AF1A10300B482DD /* Mini-8-CoreMLUITests.xctest */;
+			productReference = DF70D2592B0D3BFE0096F0E5 /* Mini-8-CoreMLUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -279,7 +291,7 @@
 				"pt-BR",
 			);
 			mainGroup = DF6537132AF1A10200B482DD;
-			productRefGroup = DF65371D2AF1A10200B482DD /* Products */;
+			productRefGroup = DF6537132AF1A10200B482DD;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -326,13 +338,19 @@
 				40FD79662AFD6E4800F4C040 /* BackgroundView.swift in Sources */,
 				40423A2E2B03F29800AF4A40 /* CapturedImageView.swift in Sources */,
 				DFEB08DA2AFD6CF300B0E66A /* ClassificationViewModel.swift in Sources */,
+				DFEB08E32AFD70A600B0E66A /* CameraView.swift in Sources */,
+				DFEB08DF2AFD6FD400B0E66A /* CameraManager.swift in Sources */,
 				40423A262B029F3200AF4A40 /* InfoTextView.swift in Sources */,
 				DFEB08D82AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel in Sources */,
+				DF210EA02B040FAF00EF47C1 /* LiveCameraView.swift in Sources */,
 				DF6537222AF1A10200B482DD /* ContentView.swift in Sources */,
 				DFAD40F12B0E6DC500B8E240 /* IntroView.swift in Sources */,
 				DFAD40F32B0E6E1300B8E240 /* BotaoProximoView.swift in Sources */,
 				40423A222B029ACE00AF4A40 /* InfoButtonComponent.swift in Sources */,
+				DF70D25B2B0D41B00096F0E5 /* DogSkinLesion.mlmodel in Sources */,
 				DF6537202AF1A10200B482DD /* Mini_8_CoreMLApp.swift in Sources */,
+				DFEB08E62AFD758800B0E66A /* DiagnosticoView.swift in Sources */,
+				DFEB08E82AFD7BEA00B0E66A /* ClassificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,9 +526,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini-8-CoreML/Preview Content\"";
-				DEVELOPMENT_TEAM = XD47C3K8T7;
+				DEVELOPMENT_TEAM = RRUDNBUBWM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mini-8-CoreML/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = FurDog;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Ao conceder permissão para usar a câmera, o aplicativo será capaz de verificar possíveis doenças de pele de um cachorro";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -538,9 +560,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini-8-CoreML/Preview Content\"";
-				DEVELOPMENT_TEAM = XD47C3K8T7;
+				DEVELOPMENT_TEAM = RRUDNBUBWM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mini-8-CoreML/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = FurDog;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Ao conceder permissão para usar a câmera, o aplicativo será capaz de verificar possíveis doenças de pele de um cachorro";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

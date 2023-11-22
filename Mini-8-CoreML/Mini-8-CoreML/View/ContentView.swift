@@ -14,12 +14,10 @@ struct ContentView: View {
 //    }
     
     var body: some View {
-//        NavigationStack{
+        NavigationStack{
+            CameraView()
 //            CapturedImageView(image: Image("cachorro"), photo: UIImage(named: "cachorro")!, disease: "", accuracy: "", description: "", recommendations: "")
-    
-//        }
-        
-        IntroView()
+        }
     }
 }
 

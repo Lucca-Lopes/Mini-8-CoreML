@@ -27,3 +27,33 @@
 "description" = "Descrição";
 
 "recommendation" = "Recomendações";
+
+//MARK: Classification diseases
+
+"skinLesion" = "Lesão de pele";
+
+"healthy" = "Saudável";
+
+"circularAlopecia" = "Alopecia";
+
+"keratosis" = "Hiperqueratose";
+
+//MARK: Classification descriptions
+
+"skinLesionDescription" = "As lesões de pele, particularmente as feridas, possuem grande importância clínica em função da alta frequência com que ocorrem nos animais, além da possibilidade de resultarem em infecções e de se constituírem como uma fonte de dor e incômodo.";
+
+"healthyDescription" = "Seu cachorro aparentemente está saudável!";
+
+"circularAlopeciaDescription" = "Tanto os humanos quanto os cães podem sofrer queda de pelos fisiológica. Essa, por sua vez, pode ocorrer em função do envelhecimento da pele ou do próprio folículo. Contudo, é essencial atentar-se a uma diferença: a perda de pelos fisiológica não é acompanhada de outros sintomas enquanto a alopecia pode apresentá-los.";
+
+"keratosisDescription" = "A hiperqueratose em cães é uma complicação que causa feridas e calos nos cotovelos e nas patas do cachorro. Essa doença surge como consequência do atrito constante da pele do animal com superfícies ásperas e pouco confortáveis, normalmente durante movimentos como sentar ou deitar-se.";
+
+//MARK: Classification recomendations
+
+"skinLesionRecomendation" = "Ao encontrar feridas na pele do seu pet, o primeiro passo é manter o local limpo para evitar que infeccione. Para isso lave bem as mãos com água e sabão e imobilize o animal de companhia, fazendo com que se sinta seguro.\nRealize a limpeza das feridas com uma gaze e soro fisiológico para tirar qualquer resto de sujeira. Não é indicado o uso de gaze de algodão, pois pode deixar fibras na ferida.\nSempre recomendamos consultar um veterinário!";
+
+"healthyRecomendation" = "Sempre recomendamos consultar um veterinário!";
+
+"circularAlopeciaRecomendation" = "Alimentação rica em nutrientes e uso de medicamentos indicados pelo veterinário formam o tratamento da alopecia em cães. Assim, você vai garantir que o sistema imunológico do seu cãozinho fique forte para resistir à doença ou controlá-la.\nSempre recomendamos consultar um veterinário!";
+
+"keratosisRecomendation" = "O tratamento da hiperqueratose caninca é composto por uma combinação de cremes e pomadas com pequenas mudanças na rotina do pet.\nSe não for possível trocar o piso da casa, use camas, colchões e cobertores para diminuir o atrito do cotovelo do cão com o solo.\nSempre recomendamos consultar um veterinário!";
