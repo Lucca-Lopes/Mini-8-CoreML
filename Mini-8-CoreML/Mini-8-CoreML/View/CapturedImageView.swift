@@ -75,23 +75,23 @@ struct CapturedImageView: View {
             
             .frame(height: screenSize.height * 0.45)
         }
-        .navigationBarBackButtonHidden()
+        .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button{
-                    dismiss()
                     vm.importedImage = nil
                 } label: {
                     Image(systemName: "chevron.backward")
                         .fontWeight(.bold)
                 }
             }
+            
             ToolbarItem(placement: .navigationBarTrailing) {
                 ShareLink(item: Image(uiImage: self.exportedView ?? UIImage()), preview: SharePreview("Teste", image: Image(uiImage: self.exportedView ?? UIImage())))
-                    .fontWeight(.bold)
                     .onAppear{
                         self.exportedView = ImageRenderer(content: self.body).uiImage!
                     }
+
             }
         }
         .accentColor(.white)

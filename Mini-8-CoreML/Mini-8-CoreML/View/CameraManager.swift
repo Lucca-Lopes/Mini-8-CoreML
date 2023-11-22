@@ -23,12 +23,12 @@ struct CameraManeger: UIViewControllerRepresentable {
                 parent.image = uiImage
             }
 
-            parent.presentationMode.wrappedValue.dismiss()
+//            parent.presentationMode.wrappedValue.dismiss()
         }
 
-        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            parent.presentationMode.wrappedValue.dismiss()
-        }
+//        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+//            parent.presentationMode.wrappedValue.dismiss()
+//        }
     }
 
     func makeCoordinator() -> Coordinator {

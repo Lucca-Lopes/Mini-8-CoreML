@@ -8,15 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-//    init(){
-//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color("labelColor")), .font: UIFont.systemFont(ofSize: 30, weight: .bold)]
-//    }
+    init(){
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color("labelColor")), .font: UIFont.systemFont(ofSize: 30, weight: .bold)]
+    }
+   
     
     var body: some View {
         NavigationStack{
-            CameraView()
+            
+            IntroView()
+                
+//            CameraView()
 //            CapturedImageView(image: Image("cachorro"), photo: UIImage(named: "cachorro")!, disease: "", accuracy: "", description: "", recommendations: "")
+                .navigationBarBackButtonHidden(true)
         }
     }
 }
