@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DiseasesDescriptionView: View {
-    @Environment (\.screenSize) var screenSize
+   @Environment (\.screenSize) var screenSize
     @State var disease: String = "Doença"
     @State var accuracy: String = "0%"
     @State var description: String = "Descrição aqui"
@@ -61,7 +61,7 @@ struct DiseasesDescriptionView: View {
             
         }
         .padding(.horizontal)
-        .frame(width: screenSize.width, alignment: .top)
+       .frame(width: screenSize.width, alignment: .top)
         .background{
             BackgroundView()
         }

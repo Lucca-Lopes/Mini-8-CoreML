@@ -16,6 +16,9 @@
 		DF6537312AF1A10300B482DD /* Mini_8_CoreMLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6537302AF1A10300B482DD /* Mini_8_CoreMLTests.swift */; };
 		DF65373B2AF1A10300B482DD /* Mini_8_CoreMLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65373A2AF1A10300B482DD /* Mini_8_CoreMLUITests.swift */; };
 		DF65373D2AF1A10300B482DD /* Mini_8_CoreMLUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65373C2AF1A10300B482DD /* Mini_8_CoreMLUITestsLaunchTests.swift */; };
+		DF889B062B065BC4000AB2CB /* OffsetPageTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF889B052B065BC4000AB2CB /* OffsetPageTabView.swift */; };
+		DFBF8E1B2B029BFA00C184B1 /* BotaoProximoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBF8E1A2B029BFA00C184B1 /* BotaoProximoView.swift */; };
+		DFBF8E1D2B029E8300C184B1 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBF8E1C2B029E8300C184B1 /* IntroView.swift */; };
 		DFEB08D82AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08D72AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel */; };
 		DFEB08DA2AFD6CF300B0E66A /* ClassificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08D92AFD6CF300B0E66A /* ClassificationViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +53,9 @@
 		DF6537362AF1A10300B482DD /* Mini-8-CoreMLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mini-8-CoreMLUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF65373A2AF1A10300B482DD /* Mini_8_CoreMLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini_8_CoreMLUITests.swift; sourceTree = "<group>"; };
 		DF65373C2AF1A10300B482DD /* Mini_8_CoreMLUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini_8_CoreMLUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DF889B052B065BC4000AB2CB /* OffsetPageTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetPageTabView.swift; sourceTree = "<group>"; };
+		DFBF8E1A2B029BFA00C184B1 /* BotaoProximoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoProximoView.swift; sourceTree = "<group>"; };
+		DFBF8E1C2B029E8300C184B1 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		DFEB08D72AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "DogSkinDiseaseImageClassification 1.mlmodel"; sourceTree = "<group>"; };
 		DFEB08D92AFD6CF300B0E66A /* ClassificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +91,8 @@
 				DFEB08DB2AFD6D2D00B0E66A /* Components */,
 				DF6537212AF1A10200B482DD /* ContentView.swift */,
 				40FD79672AFD716D00F4C040 /* DiseasesDescriptionView.swift */,
+				DFBF8E1C2B029E8300C184B1 /* IntroView.swift */,
+				DF889B052B065BC4000AB2CB /* OffsetPageTabView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				40FD79652AFD6E4800F4C040 /* BackgroundView.swift */,
+				DFBF8E1A2B029BFA00C184B1 /* BotaoProximoView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -302,10 +311,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				40FD79662AFD6E4800F4C040 /* BackgroundView.swift in Sources */,
+				DFBF8E1D2B029E8300C184B1 /* IntroView.swift in Sources */,
 				DFEB08DA2AFD6CF300B0E66A /* ClassificationViewModel.swift in Sources */,
+				DF889B062B065BC4000AB2CB /* OffsetPageTabView.swift in Sources */,
 				40FD79682AFD716D00F4C040 /* DiseasesDescriptionView.swift in Sources */,
 				DFEB08D82AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel in Sources */,
 				DF6537222AF1A10200B482DD /* ContentView.swift in Sources */,
+				DFBF8E1B2B029BFA00C184B1 /* BotaoProximoView.swift in Sources */,
 				DF6537202AF1A10200B482DD /* Mini_8_CoreMLApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

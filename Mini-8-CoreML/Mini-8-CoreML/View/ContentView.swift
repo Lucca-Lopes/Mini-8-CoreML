@@ -9,16 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack{
-            DiseasesDescriptionView()
-                .background{
-                    BackgroundView()
-                }
-        }
-        
+
+      
+            IntroView()
+       
     }
 }
 
-//#Preview {
-//    ContentView()
-//}
+#Preview {
+    ContentView()
+}

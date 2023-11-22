@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BackgroundView: View {
-    @Environment (\.screenSize) var screenSize
+
     
     var body: some View {
             Image("backgroundImage")
