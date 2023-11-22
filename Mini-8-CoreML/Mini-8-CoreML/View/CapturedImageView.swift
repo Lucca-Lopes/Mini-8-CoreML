@@ -96,8 +96,10 @@ struct CapturedImageView: View {
                 }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                ShareLink(item: Image(uiImage: photo), preview: SharePreview("Teste", image: Image(uiImage: photo)))
-                    .fontWeight(.bold)
+                ShareLink(item: Image(uiImage: photo), preview: SharePreview("Diagnóstico", image: Image(uiImage: photo))){
+                    Image(systemName: "square.and.arrow.up")
+                        .fontWeight(.bold)
+                }
                     .onAppear{
                         photo = ImageRenderer(content: self.body).uiImage!
                     }
