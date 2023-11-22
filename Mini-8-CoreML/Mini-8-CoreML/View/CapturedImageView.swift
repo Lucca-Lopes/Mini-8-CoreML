@@ -1,9 +1,4 @@
-//
-//  CapturedImageView.swift
-//  Mini-8-CoreML
-//
-//  Created by Aline Reis Silva on 14/11/23.
-//
+
 
 import SwiftUI
 

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "cachorro@1x.png",
+      "filename" : "Group 14@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "cachorro@2x.png",
+      "filename" : "Group 14@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "cachorro@3x.png",
+      "filename" : "Group 14@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
