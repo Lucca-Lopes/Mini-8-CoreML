@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF210EA02B040FAF00EF47C1 /* LiveCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF210E9F2B040FAF00EF47C1 /* LiveCameraView.swift */; };
+		40423A222B029ACE00AF4A40 /* InfoButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40423A212B029ACE00AF4A40 /* InfoButtonComponent.swift */; };
+		40423A242B029ADA00AF4A40 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40423A232B029ADA00AF4A40 /* InfoView.swift */; };
+		40423A262B029F3200AF4A40 /* InfoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40423A252B029F3200AF4A40 /* InfoTextView.swift */; };
+		40423A292B02B46100AF4A40 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40423A2B2B02B46100AF4A40 /* Localizable.strings */; };
+		40423A2E2B03F29800AF4A40 /* CapturedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40423A2D2B03F29800AF4A40 /* CapturedImageView.swift */; };
 		40FD79662AFD6E4800F4C040 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FD79652AFD6E4800F4C040 /* BackgroundView.swift */; };
-		40FD79682AFD716D00F4C040 /* DiseasesDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FD79672AFD716D00F4C040 /* DiseasesDescriptionView.swift */; };
 		DF6537202AF1A10200B482DD /* Mini_8_CoreMLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65371F2AF1A10200B482DD /* Mini_8_CoreMLApp.swift */; };
 		DF6537222AF1A10200B482DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6537212AF1A10200B482DD /* ContentView.swift */; };
 		DF6537242AF1A10300B482DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF6537232AF1A10300B482DD /* Assets.xcassets */; };
@@ -21,6 +26,11 @@
 		DFBF8E1D2B029E8300C184B1 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBF8E1C2B029E8300C184B1 /* IntroView.swift */; };
 		DFEB08D82AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08D72AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel */; };
 		DFEB08DA2AFD6CF300B0E66A /* ClassificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08D92AFD6CF300B0E66A /* ClassificationViewModel.swift */; };
+		DFEB08DD2AFD6D4400B0E66A /* DescriptionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08DC2AFD6D4400B0E66A /* DescriptionSheet.swift */; };
+		DFEB08DF2AFD6FD400B0E66A /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08DE2AFD6FD400B0E66A /* CameraManager.swift */; };
+		DFEB08E32AFD70A600B0E66A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08E22AFD70A600B0E66A /* CameraView.swift */; };
+		DFEB08E62AFD758800B0E66A /* DiagnosticoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08E52AFD758800B0E66A /* DiagnosticoView.swift */; };
+		DFEB08E82AFD7BEA00B0E66A /* ClassificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08E72AFD7BEA00B0E66A /* ClassificationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +51,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF210E9F2B040FAF00EF47C1 /* LiveCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCameraView.swift; sourceTree = "<group>"; };
+		40423A212B029ACE00AF4A40 /* InfoButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoButtonComponent.swift; sourceTree = "<group>"; };
+		40423A232B029ADA00AF4A40 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		40423A252B029F3200AF4A40 /* InfoTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTextView.swift; sourceTree = "<group>"; };
+		40423A2A2B02B46100AF4A40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		40423A2C2B02B46600AF4A40 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		40423A2D2B03F29800AF4A40 /* CapturedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturedImageView.swift; sourceTree = "<group>"; };
 		40FD79652AFD6E4800F4C040 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
-		40FD79672AFD716D00F4C040 /* DiseasesDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseasesDescriptionView.swift; sourceTree = "<group>"; };
 		DF65371C2AF1A10200B482DD /* Mini-8-CoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-8-CoreML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF65371F2AF1A10200B482DD /* Mini_8_CoreMLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini_8_CoreMLApp.swift; sourceTree = "<group>"; };
 		DF6537212AF1A10200B482DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +74,12 @@
 		DFBF8E1C2B029E8300C184B1 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		DFEB08D72AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "DogSkinDiseaseImageClassification 1.mlmodel"; sourceTree = "<group>"; };
 		DFEB08D92AFD6CF300B0E66A /* ClassificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationViewModel.swift; sourceTree = "<group>"; };
+		DFEB08DC2AFD6D4400B0E66A /* DescriptionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionSheet.swift; sourceTree = "<group>"; };
+		DFEB08DE2AFD6FD400B0E66A /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		DFEB08E22AFD70A600B0E66A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		DFEB08E42AFD735900B0E66A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DFEB08E52AFD758800B0E66A /* DiagnosticoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticoView.swift; sourceTree = "<group>"; };
+		DFEB08E72AFD7BEA00B0E66A /* ClassificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,11 +110,20 @@
 		DF4A3D052AFD600C00BC3E28 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DFEB08DB2AFD6D2D00B0E66A /* Components */,
 				DF6537212AF1A10200B482DD /* ContentView.swift */,
+
 				40FD79672AFD716D00F4C040 /* DiseasesDescriptionView.swift */,
 				DFBF8E1C2B029E8300C184B1 /* IntroView.swift */,
 				DF889B052B065BC4000AB2CB /* OffsetPageTabView.swift */,
+			DFEB08DB2AFD6D2D00B0E66A /* Components */,
+				DFEB08DE2AFD6FD400B0E66A /* CameraManager.swift */,
+				DFEB08E22AFD70A600B0E66A /* CameraView.swift */,
+				DFEB08E52AFD758800B0E66A /* DiagnosticoView.swift */,
+				DF210E9F2B040FAF00EF47C1 /* LiveCameraView.swift */,
+				40423A232B029ADA00AF4A40 /* InfoView.swift */,
+				40423A252B029F3200AF4A40 /* InfoTextView.swift */,
+				40423A2D2B03F29800AF4A40 /* CapturedImageView.swift */,
+
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				DFEB08D72AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel */,
+				DFEB08E72AFD7BEA00B0E66A /* ClassificationService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,6 +148,7 @@
 		DF6537132AF1A10200B482DD = {
 			isa = PBXGroup;
 			children = (
+				40423A2B2B02B46100AF4A40 /* Localizable.strings */,
 				DF65371E2AF1A10200B482DD /* Mini-8-CoreML */,
 				DF65372F2AF1A10300B482DD /* Mini-8-CoreMLTests */,
 				DF6537392AF1A10300B482DD /* Mini-8-CoreMLUITests */,
@@ -136,6 +169,7 @@
 		DF65371E2AF1A10200B482DD /* Mini-8-CoreML */ = {
 			isa = PBXGroup;
 			children = (
+				DFEB08E42AFD735900B0E66A /* Info.plist */,
 				DF65371F2AF1A10200B482DD /* Mini_8_CoreMLApp.swift */,
 				DF4A3D072AFD602100BC3E28 /* Model */,
 				DF4A3D062AFD601500BC3E28 /* ViewModel */,
@@ -175,7 +209,11 @@
 			isa = PBXGroup;
 			children = (
 				40FD79652AFD6E4800F4C040 /* BackgroundView.swift */,
+
 				DFBF8E1A2B029BFA00C184B1 /* BotaoProximoView.swift */,
+
+				40423A212B029ACE00AF4A40 /* InfoButtonComponent.swift */,
+
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -261,11 +299,12 @@
 			};
 			buildConfigurationList = DF6537172AF1A10200B482DD /* Build configuration list for PBXProject "Mini-8-CoreML" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = "pt-BR";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = DF6537132AF1A10200B482DD;
 			productRefGroup = DF65371D2AF1A10200B482DD /* Products */;
@@ -285,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF6537272AF1A10300B482DD /* Preview Assets.xcassets in Resources */,
+				40423A292B02B46100AF4A40 /* Localizable.strings in Resources */,
 				DF6537242AF1A10300B482DD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,15 +350,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40423A242B029ADA00AF4A40 /* InfoView.swift in Sources */,
 				40FD79662AFD6E4800F4C040 /* BackgroundView.swift in Sources */,
+
 				DFBF8E1D2B029E8300C184B1 /* IntroView.swift in Sources */,
 				DFEB08DA2AFD6CF300B0E66A /* ClassificationViewModel.swift in Sources */,
 				DF889B062B065BC4000AB2CB /* OffsetPageTabView.swift in Sources */,
 				40FD79682AFD716D00F4C040 /* DiseasesDescriptionView.swift in Sources */,
+
+				40423A2E2B03F29800AF4A40 /* CapturedImageView.swift in Sources */,
+				DFEB08DA2AFD6CF300B0E66A /* ClassificationViewModel.swift in Sources */,
+				DFEB08E32AFD70A600B0E66A /* CameraView.swift in Sources */,
+				DFEB08DD2AFD6D4400B0E66A /* DescriptionSheet.swift in Sources */,
+				DFEB08DF2AFD6FD400B0E66A /* CameraManager.swift in Sources */,
+				40423A262B029F3200AF4A40 /* InfoTextView.swift in Sources */,
+
 				DFEB08D82AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel in Sources */,
+				DF210EA02B040FAF00EF47C1 /* LiveCameraView.swift in Sources */,
 				DF6537222AF1A10200B482DD /* ContentView.swift in Sources */,
+
 				DFBF8E1B2B029BFA00C184B1 /* BotaoProximoView.swift in Sources */,
+
+				40423A222B029ACE00AF4A40 /* InfoButtonComponent.swift in Sources */,
+
 				DF6537202AF1A10200B482DD /* Mini_8_CoreMLApp.swift in Sources */,
+				DFEB08E62AFD758800B0E66A /* DiagnosticoView.swift in Sources */,
+				DFEB08E82AFD7BEA00B0E66A /* ClassificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +410,18 @@
 			targetProxy = DF6537372AF1A10300B482DD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		40423A2B2B02B46100AF4A40 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40423A2A2B02B46100AF4A40 /* en */,
+				40423A2C2B02B46600AF4A40 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DF65373E2AF1A10300B482DD /* Debug */ = {
@@ -485,12 +554,14 @@
 				DEVELOPMENT_TEAM = 7UT3KQHPCK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mini-8-CoreML/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Ao conceder permissão para usar a câmera, o aplicativo será capaz de verificar possíveis doenças de pele de um cachorro";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -515,12 +586,14 @@
 				DEVELOPMENT_TEAM = 7UT3KQHPCK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mini-8-CoreML/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Ao conceder permissão para usar a câmera, o aplicativo será capaz de verificar possíveis doenças de pele de um cachorro";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
