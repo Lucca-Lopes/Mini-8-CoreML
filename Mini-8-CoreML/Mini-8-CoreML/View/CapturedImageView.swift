@@ -51,7 +51,7 @@ struct CapturedImageView: View {
                     Text(vm.description)
                         .font(.system(size: 17, weight: .regular))
                         .foregroundColor(Color("labelColor"))
-                        .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.15, alignment: .leading)
+                        .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.15, alignment: .topLeading)
                     
                     //recomendações
                     Text("recommendation")
@@ -62,7 +62,7 @@ struct CapturedImageView: View {
                     Text(vm.recommendation)
                         .font(.system(size: 17, weight: .regular))
                         .foregroundColor(Color("labelColor"))
-                        .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.15, alignment: .leading)
+                        .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.15, alignment: .topLeading)
                 }
             }
             .padding(.horizontal)
@@ -87,7 +87,10 @@ struct CapturedImageView: View {
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
-                ShareLink(item: Image(uiImage: self.exportedView ?? UIImage()), preview: SharePreview("Teste", image: Image(uiImage: self.exportedView ?? UIImage())))
+                ShareLink(item: Image(uiImage: self.exportedView ?? UIImage()), preview: SharePreview("Teste", image: Image(uiImage: self.exportedView ?? UIImage()))){
+                    Image(systemName: "square.and.arrow.up")
+                        .fontWeight(.bold)
+                }
                     .onAppear{
                         self.exportedView = ImageRenderer(content: self.body).uiImage!
                     }
