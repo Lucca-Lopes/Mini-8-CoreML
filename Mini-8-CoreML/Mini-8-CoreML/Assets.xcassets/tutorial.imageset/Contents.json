@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Group 63@1x 1.png",
+      "filename" : "Tutorial@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,12 +12,12 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Group 60@1x 1.png",
+      "filename" : "tutorial@1x-3.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Group 63@2x 1.png",
+      "filename" : "Tutorial@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -28,12 +28,12 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Group 60@2x 1.png",
+      "filename" : "tutorial@2x-3.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Group 63@3x 1.png",
+      "filename" : "Tutorial@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -44,30 +44,30 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Group 60@3x 1.png",
+      "filename" : "tutorial@3x-3.png",
       "idiom" : "universal",
       "scale" : "3x"
     },
     {
-      "filename" : "Group 63@1x.png",
-      "idiom" : "universal",
-      "locale" : "en",
-      "scale" : "1x"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "dark"
-        }
-      ],
-      "filename" : "Group 60@1x.png",
+      "filename" : "Tutorial@1x 1.png",
       "idiom" : "universal",
       "locale" : "en",
       "scale" : "1x"
     },
     {
-      "filename" : "Group 63@2x.png",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "tutorial@1x-3 1.png",
+      "idiom" : "universal",
+      "locale" : "en",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Tutorial@2x 1.png",
       "idiom" : "universal",
       "locale" : "en",
       "scale" : "2x"
@@ -79,13 +79,13 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Group 60@2x.png",
+      "filename" : "tutorial@2x-3 1.png",
       "idiom" : "universal",
       "locale" : "en",
       "scale" : "2x"
     },
     {
-      "filename" : "Group 63@3x.png",
+      "filename" : "Tutorial@3x 1.png",
       "idiom" : "universal",
       "locale" : "en",
       "scale" : "3x"
@@ -97,13 +97,13 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Group 60@3x.png",
+      "filename" : "tutorial@3x-3 1.png",
       "idiom" : "universal",
       "locale" : "en",
       "scale" : "3x"
     },
     {
-      "filename" : "Group 14@1x 1.png",
+      "filename" : "tutorial@1x-1.png",
       "idiom" : "universal",
       "locale" : "pt-BR",
       "scale" : "1x"
@@ -115,13 +115,13 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Group 57@1x 1.png",
+      "filename" : "tutorial@1x-2.png",
       "idiom" : "universal",
       "locale" : "pt-BR",
       "scale" : "1x"
     },
     {
-      "filename" : "Group 14@2x 1.png",
+      "filename" : "tutorial@2x-1.png",
       "idiom" : "universal",
       "locale" : "pt-BR",
       "scale" : "2x"
@@ -133,13 +133,13 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Group 57@2x 1.png",
+      "filename" : "tutorial@2x-2.png",
       "idiom" : "universal",
       "locale" : "pt-BR",
       "scale" : "2x"
     },
     {
-      "filename" : "Group 14@3x 1.png",
+      "filename" : "tutorial@3x-1.png",
       "idiom" : "universal",
       "locale" : "pt-BR",
       "scale" : "3x"
@@ -151,7 +151,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Group 57@3x 1.png",
+      "filename" : "tutorial@3x-2.png",
       "idiom" : "universal",
       "locale" : "pt-BR",
       "scale" : "3x"
