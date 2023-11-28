@@ -60,7 +60,7 @@ struct CapturedImageView: View {
                         Button{
                             expanded.toggle()
                         } label: {
-                            Text(expanded ? "read less" : "read more")
+                            Text(expanded ? "readLess" : "readMore")
                         }
                         .foregroundStyle(Color("AccentColor"))
                         .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
@@ -81,7 +81,7 @@ struct CapturedImageView: View {
                         Button{
                             expanded2.toggle()
                         } label: {
-                            Text(expanded2 ? "read less" : "read more")
+                            Text(expanded2 ? "readLess" : "readMore")
                         }
                         .foregroundStyle(Color("AccentColor"))
                         .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
