@@ -26,6 +26,7 @@
 		DF70D25B2B0D41B00096F0E5 /* DogSkinLesion.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DF70D25A2B0D41B00096F0E5 /* DogSkinLesion.mlmodel */; };
 		DFAD40F12B0E6DC500B8E240 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAD40F02B0E6DC500B8E240 /* IntroView.swift */; };
 		DFAD40F32B0E6E1300B8E240 /* BotaoProximoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAD40F22B0E6E1300B8E240 /* BotaoProximoView.swift */; };
+		DFD79DF42B1517B20055DCDF /* IntroducaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD79DF32B1517B20055DCDF /* IntroducaoView.swift */; };
 		DFC6A23C2B17B1750019F4D3 /* LiveCamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6A23B2B17B1750019F4D3 /* LiveCamViewController.swift */; };
 		DFC6A23F2B17B2020019F4D3 /* LiveCamExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6A23E2B17B2020019F4D3 /* LiveCamExtension.swift */; };
 		DFC6A2412B17B2A60019F4D3 /* LiveCamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6A2402B17B2A60019F4D3 /* LiveCamView.swift */; };
@@ -82,7 +83,7 @@
 		DFC6A23E2B17B2020019F4D3 /* LiveCamExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCamExtension.swift; sourceTree = "<group>"; };
 		DFC6A2402B17B2A60019F4D3 /* LiveCamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCamView.swift; sourceTree = "<group>"; };
 		DFCC82FE2B0D2AF000C8B723 /* Mini-8-CoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-8-CoreML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFD79DF12B15122B0055DCDF /* DicasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicasView.swift; sourceTree = "<group>"; };
+		DFD79DF32B1517B20055DCDF /* IntroducaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroducaoView.swift; sourceTree = "<group>"; };
 		DFEB08D72AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "DogSkinDiseaseImageClassification 1.mlmodel"; sourceTree = "<group>"; };
 		DFEB08D92AFD6CF300B0E66A /* ClassificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationViewModel.swift; sourceTree = "<group>"; };
 		DFEB08DE2AFD6FD400B0E66A /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 				40423A232B029ADA00AF4A40 /* InfoView.swift */,
 				40423A252B029F3200AF4A40 /* InfoTextView.swift */,
 				40423A2D2B03F29800AF4A40 /* CapturedImageView.swift */,
+				DFD79DF32B1517B20055DCDF /* IntroducaoView.swift */,
 				DFD79DF12B15122B0055DCDF /* DicasView.swift */,
 				DFC6A2402B17B2A60019F4D3 /* LiveCamView.swift */,
 			);
@@ -369,7 +371,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				40423A242B029ADA00AF4A40 /* InfoView.swift in Sources */,
-				DFD79DF22B15122B0055DCDF /* DicasView.swift in Sources */,
 				40FD79662AFD6E4800F4C040 /* BackgroundView.swift in Sources */,
 				40423A2E2B03F29800AF4A40 /* CapturedImageView.swift in Sources */,
 				DFEB08DA2AFD6CF300B0E66A /* ClassificationViewModel.swift in Sources */,
@@ -382,6 +383,7 @@
 				DF210EA02B040FAF00EF47C1 /* LiveCameraView.swift in Sources */,
 				DF6537222AF1A10200B482DD /* ContentView.swift in Sources */,
 				DF555A222B0E77E700F32EF6 /* Tab.swift in Sources */,
+				DFD79DF42B1517B20055DCDF /* IntroducaoView.swift in Sources */,
 				DFAD40F12B0E6DC500B8E240 /* IntroView.swift in Sources */,
 				DFAD40F32B0E6E1300B8E240 /* BotaoProximoView.swift in Sources */,
 				40423A222B029ACE00AF4A40 /* InfoButtonComponent.swift in Sources */,

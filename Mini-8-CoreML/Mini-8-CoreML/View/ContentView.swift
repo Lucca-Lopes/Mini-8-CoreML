@@ -18,16 +18,15 @@ struct ContentView: View {
     var body: some View {
         NavigationStack{
             LiveCamView()
-//            IntroView(introPresented: $introPresented)
-            
-//            if let presented = introPresented {
-//                if presented{
-//                    CameraView()
-//                } else {
-//                    IntroView(introPresented: $introPresented)
-//                }
-//                
-//            }
+//            IntroView(introPresented: $introPresented)            
+            if let presented = introPresented {
+                if presented{
+                    CameraView()
+                } else {
+                    IntroView(introPresented: $introPresented)
+                }
+                
+            }
 //            CameraView()
 //            CapturedImageView(image: Image("cachorro"), photo: UIImage(named: "cachorro")!, disease: "", accuracy: "", description: "", recommendations: "")
                

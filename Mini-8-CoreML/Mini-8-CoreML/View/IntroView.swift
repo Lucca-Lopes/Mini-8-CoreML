@@ -28,36 +28,51 @@ struct IntroView: View {
                 ForEach(vm.imageTabs){ tab in
                     
                   
-                        VStack(alignment: .leading){
+                    VStack(alignment: .leading, spacing: 0){
+                        if self.vm.sholdShow(for: tab){
                             
-                            
-                                Image(tab.image)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: screenSize.width * 0.8, height: screenSize.height * 0.4)
-                            Image("cachorro")
+                            Image(tab.image)
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: screenSize.width * 0.5)
+                               // .frame(width: screenSize.width , height: screenSize.height)
+
+                               .ignoresSafeArea()
+                            
+                        }
+                        else{
+                        Spacer()
+                            Image(tab.image)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: screenSize.width, height: screenSize.height * 0.25)
+                            
+                            Image("cachorro")
+////.resizable()
+//                                .aspectRatio(contentMode: .fit)
+//                                .clipped()
+//                                .frame(height: screenSize.height * 0.5, alignment: .bottom)
+//                                .background(.green)
+//                                .ignoresSafeArea()
+                                .resizable()
+                                .scaledToFit()
+                                .offset(y: 34)
+                                .frame(height: screenSize.height * 0.7, alignment: .bottom)
                                 .ignoresSafeArea()
-                       
+                                
+                                
+                            
+                        }
+                        
                     }
-                    
-                    
-                    
-                    
-                        .frame(width: screenSize.width, height: screenSize.height)
-                    
+                       
+                      
                         .tag(getIndex(tab: tab))
-                
                 }
-                
+               
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            .ignoresSafeArea()
-            
-            
-        
+           .ignoresSafeArea()
+
                 VStack{
 
                     Button{
@@ -70,68 +85,78 @@ struct IntroView: View {
                             }
                         }
                     }label: {
-                        Text("Pular Introdução")
-                            .font(.headline)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                            .padding(.trailing)
-                        
+                        if fakeIndex < vm.indexDog {
+                            Text("Pular Introdução")
+                                .foregroundStyle(Color("labelColor"))
+                                .font(.headline)
+                                .frame(maxWidth: .infinity, alignment: .trailing)
+                                .padding(.trailing)
+                            
+                        } else {
+                            Text("Finalizar")
+                                .font(.headline)
+                                .foregroundStyle(.white)
+                                .frame(maxWidth: .infinity, alignment: .trailing)
+                                .padding(.trailing)
+                            
+                        }
                     }
-                    
                     Spacer()
                     
                     HStack(alignment: .bottom){
-                        
+                       
                         ForEach(vm.imageTabs.indices, id: \.self){index in
-                          
+                            if currentIndex == vm.indexDog {
+                                
+                                
+                            } else{
+                                
                                 Capsule()
                                     .fill(Color(currentIndex == index ? "AccentColor" : "orange") )
-                                    .frame(width: currentIndex == index ? 30 : 20, height: 20)
+                                    .frame(width: currentIndex == index ? 30 : 15, height: 15)
                                     .animation(.easeInOut, value: currentIndex)
+                            }
+                                                  }
+                            Spacer()
                             
-                        }
-                        Spacer()
-                        
-                        Button{
-                            fakeIndex = (currentIndex + 1) % vm.imageTabs.count
-                            
-                        }
-                    label: {
-                        BotaoProximoView()
-                            .background(
-                                RoundedRectangle(cornerRadius: 40)
-                                    .fill(Color("AccentColor"))
+                            Button{
+                                fakeIndex = (currentIndex + 1) % vm.imageTabs.count
                                 
-                            )
-                        
+                            }
+                    label: {
+                        if fakeIndex < vm.indexDog {
+                            BotaoProximoView()
+                                .background(
+                                    RoundedRectangle(cornerRadius: 40)
+                                        .fill(Color("AccentColor"))
+                                    
+                                )
+                        }
                     }
-                        
-                        
-                    }
-                    .padding(.horizontal, 50)
+                            
+                       
+                    }.padding(.bottom)
+                    .padding(.trailing, 50)
+                    .padding(.leading, 30)
                 }
                 .frame(width: screenSize.width, height: screenSize.height)
-                
-           
+               
+
         }
             
             .frame(width: screenSize.width, height: screenSize.height)
-            //                    .padding(.horizontal, 50)
-            
             .background(
                 BackgroundView()
+                    
             )
+        
             .onChange(of: fakeIndex) { newValue in
                 currentIndex = fakeIndex
                 
             }
         }
-   
-        
-    
-    
-    
+
     func getIndex(tab: Tab) -> Int {
-        
         
         let index = vm.imageTabs.firstIndex { currentTab in
             return currentTab.id == tab.id
@@ -139,6 +164,4 @@ struct IntroView: View {
         return index
     }
 }
-//
-//
-//}
+

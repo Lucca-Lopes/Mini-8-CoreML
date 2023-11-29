@@ -15,5 +15,6 @@ struct BackgroundView: View {
                 .resizable()
                 .scaledToFill()
                 .background(Color("backgroundColor"))
+                .ignoresSafeArea()
         }
 }
