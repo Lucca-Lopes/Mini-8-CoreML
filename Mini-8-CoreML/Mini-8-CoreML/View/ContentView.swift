@@ -17,7 +17,8 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack{
-            IntroView(introPresented: $introPresented)
+            LiveCamView()
+//            IntroView(introPresented: $introPresented)
             
 //            if let presented = introPresented {
 //                if presented{
