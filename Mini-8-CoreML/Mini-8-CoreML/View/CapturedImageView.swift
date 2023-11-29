@@ -8,6 +8,8 @@ struct CapturedImageView: View {
     @Environment (\.screenSize) var screenSize
     
     @State var exportedView: UIImage? = nil
+    @State var expanded: Bool = false
+    @State var expanded2: Bool = false
         
     var body: some View {
         VStack{
@@ -30,39 +32,60 @@ struct CapturedImageView: View {
                     Text("\(vm.accuracy)%")
                         .font(.system(size: 22, weight: .semibold))
                         .foregroundColor(Color("labelColor"))
-                
-
-                        Image(systemName: "pawprint")
-                            .font(.system(size: 22, weight: .semibold))
-                            .foregroundStyle(Color("labelColor"))
-                        
+                    
+                    
+                    Image(systemName: "pawprint")
+                        .font(.system(size: 22, weight: .semibold))
+                        .foregroundStyle(Color("labelColor"))
+                    
                 }
                 
                 Divider()
                     .background(Color("labelColor"))
                 
-                VStack(alignment: .leading){
-                    //descrição
-                    Text("description")
-                        .font(.system(size: 20, weight: .semibold))
-                        .foregroundColor(Color("labelColor"))
-                        .padding(.vertical)
-                    
-                    Text(vm.description)
-                        .font(.system(size: 17, weight: .regular))
-                        .foregroundColor(Color("labelColor"))
-                        .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.15, alignment: .leading)
-                    
-                    //recomendações
-                    Text("recommendation")
-                        .font(.system(size: 20, weight: .semibold))
-                        .foregroundColor(Color("labelColor"))
-                        .padding(.vertical)
-                    
-                    Text(vm.recommendation)
-                        .font(.system(size: 17, weight: .regular))
-                        .foregroundColor(Color("labelColor"))
-                        .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.15, alignment: .leading)
+                ScrollView{
+                    VStack(alignment: .leading){
+                        //descrição
+                        Text("description")
+                            .font(.system(size: 20, weight: .semibold))
+                            .foregroundColor(Color("labelColor"))
+                            .padding(.vertical)
+                        Text(vm.description)
+                            .font(.system(size: 17, weight: .regular))
+                            .foregroundColor(Color("labelColor"))
+                            .frame(width: screenSize.width * 0.9, alignment: .topLeading)
+                            .lineLimit(expanded ? nil : 5)
+                        
+                        //botão para expandir
+                        Button{
+                            expanded.toggle()
+                        } label: {
+                            Text(expanded ? "readLess" : "readMore")
+                        }
+                        .foregroundStyle(Color("AccentColor"))
+                        .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
+                        
+                        //recomendações
+                        Text("recommendation")
+                            .font(.system(size: 20, weight: .semibold))
+                            .foregroundColor(Color("labelColor"))
+                            .padding(.vertical)
+                        
+                        Text(vm.recommendation)
+                            .font(.system(size: 17, weight: .regular))
+                            .foregroundColor(Color("labelColor"))
+                            .frame(width: screenSize.width * 0.9, alignment: .topLeading)
+                            .lineLimit(expanded ? nil : 5)
+
+                        //botão para expandir
+                        Button{
+                            expanded2.toggle()
+                        } label: {
+                            Text(expanded2 ? "readLess" : "readMore")
+                        }
+                        .foregroundStyle(Color("AccentColor"))
+                        .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
+                    }
                 }
             }
             .padding(.horizontal)
@@ -87,7 +110,10 @@ struct CapturedImageView: View {
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
-                ShareLink(item: Image(uiImage: self.exportedView ?? UIImage()), preview: SharePreview("Teste", image: Image(uiImage: self.exportedView ?? UIImage())))
+                ShareLink(item: Image(uiImage: self.exportedView ?? UIImage()), preview: SharePreview("Teste", image: Image(uiImage: self.exportedView ?? UIImage()))){
+                    Image(systemName: "square.and.arrow.up")
+                        .fontWeight(.bold)
+                }
                     .onAppear{
                         self.exportedView = ImageRenderer(content: self.body).uiImage!
                     }
