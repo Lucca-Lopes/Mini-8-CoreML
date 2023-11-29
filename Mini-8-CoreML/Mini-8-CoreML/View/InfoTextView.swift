@@ -13,17 +13,46 @@ struct InfoTextView: View {
     //variáveis que recebem o texto e título
     var infoText: LocalizedStringKey
     var infoTitle: LocalizedStringKey
+    var diseases: [LocalizedStringKey] = ["healthy", "circularAlopecia", "keratosis", "skinLesion"]
+    var diseasesDescription: [LocalizedStringKey] = ["healthyDescription", "circularAlopeciaDescription", "keratosisDescription", "skinLesionDescription"]
+
     
     var body: some View {
-        VStack(alignment: .leading){
-            Text(infoText)
-                .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.82, alignment: .topLeading)
-                .font(.system(size: 17, weight: .regular))
-                .foregroundColor(Color("labelColor"))
-                .multilineTextAlignment(.leading)
-        }
-        .navigationTitle(infoTitle)
-        .frame(width: screenSize.width, height: screenSize.height)
-        .background(Color("backgroundColor"))
+            VStack(alignment: .leading){
+                if infoText == "diseasesText"{
+                    
+                Text(infoText)
+                    .frame(width: screenSize.width * 0.9, alignment: .topLeading)
+                    .font(.system(size: 17, weight: .regular))
+                    .foregroundColor(Color("labelColor"))
+                    .multilineTextAlignment(.leading)
+                    
+                        List{
+                            ForEach(0..<diseases.count, id: \.self) { i in
+                            DisclosureGroup{
+                                Text(diseasesDescription[i])
+                            } label: {
+                                Text(diseases[i])
+                            }
+                            .foregroundStyle(Color("labelColor"))
+                            .padding(.vertical)
+                        }
+                    }
+                    .scrollContentBackground(.hidden)
+                } else {
+                    ScrollView{
+                        Text(infoText)
+                            .frame(width: screenSize.width * 0.9, alignment: .topLeading)
+                            .font(.system(size: 17, weight: .regular))
+                            .foregroundColor(Color("labelColor"))
+                            .multilineTextAlignment(.leading)
+                    }
+                }
+            }
+            .padding(.horizontal)
+            .padding(.vertical, 30)
+            .navigationTitle(infoTitle)
+            .frame(width: screenSize.width, height: screenSize.height, alignment: .topLeading)
+            .background(Color("backgroundColor"))
     }
 }

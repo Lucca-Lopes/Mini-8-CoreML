@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct CameraView: View {
+    @Environment (\.screenSize) var screenSize
     @StateObject var vm = ClassificationViewModel()
     @State var image: UIImage?
     
     init(){
         UINavigationBar.appearance().barTintColor = UIColor(.clear)
     }
+    
     var body: some View {
         if vm.importedImage != nil {
             CapturedImageView()
@@ -22,13 +24,28 @@ struct CameraView: View {
                 .ignoresSafeArea()
         }
         else {
-            CameraManeger(image: $image)
-                .navigationBarBackButtonHidden()
-                .ignoresSafeArea()
-                .onChange(of: image, perform: { value in
-                    vm.importedImage = value
-                    vm.onChangeImage()
-                })
+            VStack{
+                CameraManeger(image: $image)
+                    .navigationBarBackButtonHidden()
+//                    .ignoresSafeArea()
+                    .onChange(of: image, perform: { value in
+                        vm.importedImage = value
+                        vm.onChangeImage()
+                    })
+            }
+            .toolbar{
+                ToolbarItem(placement: .topBarTrailing) {
+                    NavigationLink{
+                        InfoView()
+                    } label: {
+                        Image(systemName: "info.circle")
+                            .font(.system(size: 20))
+                            .fontWeight(.bold)
+                            .foregroundStyle(Color.white)
+                    }
+                }
+                
+            }
         }
     }
 }
