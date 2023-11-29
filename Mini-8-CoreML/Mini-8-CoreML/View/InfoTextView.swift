@@ -18,14 +18,14 @@ struct InfoTextView: View {
 
     
     var body: some View {
-//        ScrollView{
             VStack(alignment: .leading){
+                if infoText == "diseasesText"{
+                    
                 Text(infoText)
                     .frame(width: screenSize.width * 0.9, alignment: .topLeading)
                     .font(.system(size: 17, weight: .regular))
                     .foregroundColor(Color("labelColor"))
                     .multilineTextAlignment(.leading)
-                if infoText == "diseasesText"{
                     
                         List{
                             ForEach(0..<diseases.count, id: \.self) { i in
@@ -39,12 +39,20 @@ struct InfoTextView: View {
                         }
                     }
                     .scrollContentBackground(.hidden)
+                } else {
+                    ScrollView{
+                        Text(infoText)
+                            .frame(width: screenSize.width * 0.9, alignment: .topLeading)
+                            .font(.system(size: 17, weight: .regular))
+                            .foregroundColor(Color("labelColor"))
+                            .multilineTextAlignment(.leading)
+                    }
                 }
             }
             .padding(.horizontal)
-//        }
-        .navigationTitle(infoTitle)
-        .frame(width: screenSize.width)
-        .background(Color("backgroundColor"))
+            .padding(.vertical, 30)
+            .navigationTitle(infoTitle)
+            .frame(width: screenSize.width, height: screenSize.height, alignment: .topLeading)
+            .background(Color("backgroundColor"))
     }
 }
