@@ -26,11 +26,11 @@
 		DF70D25B2B0D41B00096F0E5 /* DogSkinLesion.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DF70D25A2B0D41B00096F0E5 /* DogSkinLesion.mlmodel */; };
 		DFAD40F12B0E6DC500B8E240 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAD40F02B0E6DC500B8E240 /* IntroView.swift */; };
 		DFAD40F32B0E6E1300B8E240 /* BotaoProximoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAD40F22B0E6E1300B8E240 /* BotaoProximoView.swift */; };
-		DFD79DF42B1517B20055DCDF /* IntroducaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD79DF32B1517B20055DCDF /* IntroducaoView.swift */; };
 		DFC6A23C2B17B1750019F4D3 /* LiveCamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6A23B2B17B1750019F4D3 /* LiveCamViewController.swift */; };
 		DFC6A23F2B17B2020019F4D3 /* LiveCamExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6A23E2B17B2020019F4D3 /* LiveCamExtension.swift */; };
 		DFC6A2412B17B2A60019F4D3 /* LiveCamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6A2402B17B2A60019F4D3 /* LiveCamView.swift */; };
-		DFD79DF22B15122B0055DCDF /* DicasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD79DF12B15122B0055DCDF /* DicasView.swift */; };
+		DFC6A24A2B17CC6E0019F4D3 /* EnglishInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFC6A24C2B17CC6E0019F4D3 /* EnglishInfo.plist */; };
+		DFD79DF42B1517B20055DCDF /* IntroducaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD79DF32B1517B20055DCDF /* IntroducaoView.swift */; };
 		DFEB08D82AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08D72AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel */; };
 		DFEB08DA2AFD6CF300B0E66A /* ClassificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08D92AFD6CF300B0E66A /* ClassificationViewModel.swift */; };
 		DFEB08DF2AFD6FD400B0E66A /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08DE2AFD6FD400B0E66A /* CameraManager.swift */; };
@@ -82,13 +82,14 @@
 		DFC6A23B2B17B1750019F4D3 /* LiveCamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCamViewController.swift; sourceTree = "<group>"; };
 		DFC6A23E2B17B2020019F4D3 /* LiveCamExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCamExtension.swift; sourceTree = "<group>"; };
 		DFC6A2402B17B2A60019F4D3 /* LiveCamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCamView.swift; sourceTree = "<group>"; };
+		DFC6A2442B17CBB90019F4D3 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "pt-BR"; path = "pt-BR.lproj/Info.plist"; sourceTree = "<group>"; };
+		DFC6A24B2B17CC6E0019F4D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/EnglishInfo.plist; sourceTree = "<group>"; };
 		DFCC82FE2B0D2AF000C8B723 /* Mini-8-CoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-8-CoreML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD79DF32B1517B20055DCDF /* IntroducaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroducaoView.swift; sourceTree = "<group>"; };
 		DFEB08D72AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "DogSkinDiseaseImageClassification 1.mlmodel"; sourceTree = "<group>"; };
 		DFEB08D92AFD6CF300B0E66A /* ClassificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationViewModel.swift; sourceTree = "<group>"; };
 		DFEB08DE2AFD6FD400B0E66A /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		DFEB08E22AFD70A600B0E66A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		DFEB08E42AFD735900B0E66A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DFEB08E52AFD758800B0E66A /* DiagnosticoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticoView.swift; sourceTree = "<group>"; };
 		DFEB08E72AFD7BEA00B0E66A /* ClassificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,7 +134,6 @@
 				40423A252B029F3200AF4A40 /* InfoTextView.swift */,
 				40423A2D2B03F29800AF4A40 /* CapturedImageView.swift */,
 				DFD79DF32B1517B20055DCDF /* IntroducaoView.swift */,
-				DFD79DF12B15122B0055DCDF /* DicasView.swift */,
 				DFC6A2402B17B2A60019F4D3 /* LiveCamView.swift */,
 			);
 			path = View;
@@ -175,7 +175,8 @@
 		DF65371E2AF1A10200B482DD /* Mini-8-CoreML */ = {
 			isa = PBXGroup;
 			children = (
-				DFEB08E42AFD735900B0E66A /* Info.plist */,
+				DFC6A2432B17CBB60019F4D3 /* Info.plist */,
+				DFC6A24C2B17CC6E0019F4D3 /* EnglishInfo.plist */,
 				DF65371F2AF1A10200B482DD /* Mini_8_CoreMLApp.swift */,
 				DF4A3D072AFD602100BC3E28 /* Model */,
 				DF4A3D062AFD601500BC3E28 /* ViewModel */,
@@ -344,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF6537272AF1A10300B482DD /* Preview Assets.xcassets in Resources */,
+				DFC6A24A2B17CC6E0019F4D3 /* EnglishInfo.plist in Resources */,
 				40423A292B02B46100AF4A40 /* Localizable.strings in Resources */,
 				DF6537242AF1A10300B482DD /* Assets.xcassets in Resources */,
 			);
@@ -436,6 +438,22 @@
 				40423A2C2B02B46600AF4A40 /* pt-BR */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		DFC6A2432B17CBB60019F4D3 /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFC6A2442B17CBB90019F4D3 /* pt-BR */,
+			);
+			name = Info.plist;
+			sourceTree = "<group>";
+		};
+		DFC6A24C2B17CC6E0019F4D3 /* EnglishInfo.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFC6A24B2B17CC6E0019F4D3 /* en */,
+			);
+			name = EnglishInfo.plist;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -573,7 +591,7 @@
 				INFOPLIST_FILE = "Mini-8-CoreML/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = FurDog;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Ao conceder permissão para usar a câmera, o aplicativo será capaz de verificar possíveis doenças de pele de um cachorro";
+				INFOPLIST_KEY_NSCameraUsageDescription = "By granting permission to use the camera, the app will be able to check for possible diseases on a dog's skin";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -607,7 +625,7 @@
 				INFOPLIST_FILE = "Mini-8-CoreML/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = FurDog;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Ao conceder permissão para usar a câmera, o aplicativo será capaz de verificar possíveis doenças de pele de um cachorro";
+				INFOPLIST_KEY_NSCameraUsageDescription = "By granting permission to use the camera, the app will be able to check for possible diseases on a dog's skin";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

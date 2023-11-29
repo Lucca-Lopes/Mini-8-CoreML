@@ -111,3 +111,12 @@ This policy is effective as of 2023-11-28";
 "readLess" = "Read less";
 
 "readMore" = "Read more";
+
+"skip" = "Skip";
+
+"done" = "Done";
+
+"next" = "Next";
+
+"cameraAccess" = "By granting permission to use the camera, the app will be able to check for possible diseases on a dog's skin";
+

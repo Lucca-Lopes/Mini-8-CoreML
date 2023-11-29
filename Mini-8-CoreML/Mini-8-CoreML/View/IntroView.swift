@@ -86,14 +86,14 @@ struct IntroView: View {
                         }
                     }label: {
                         if fakeIndex < vm.indexDog {
-                            Text("Pular Introdução")
+                            Text("skip")
                                 .foregroundStyle(Color("labelColor"))
                                 .font(.headline)
                                 .frame(maxWidth: .infinity, alignment: .trailing)
                                 .padding(.trailing)
                             
                         } else {
-                            Text("Finalizar")
+                            Text("done")
                                 .font(.headline)
                                 .foregroundStyle(.white)
                                 .frame(maxWidth: .infinity, alignment: .trailing)

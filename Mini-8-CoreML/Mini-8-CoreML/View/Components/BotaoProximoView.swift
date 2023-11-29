@@ -9,7 +9,7 @@ struct BotaoProximoView: View {
             ZStack{
               
                     
-                Text("Próximo")
+                Text("next")
                     .font(.system(size: 16))
                     .fontWeight(.semibold)
                     .foregroundColor(Color("labelColor"))

@@ -112,3 +112,11 @@ Esta política é efectiva a partir de 2023-11-28
 "readLess" = "Ler menos";
 
 "readMore" = "Ler mais";
+
+"skip" = "Pular introdução";
+
+"done" = "Finalizar";
+
+"next" = "Próximo";
+
+"cameraAccess" = "Ao conceder permissão para usar a câmera, o aplicativo será capaz de verificar possíveis doenças de pele de um cachorro";

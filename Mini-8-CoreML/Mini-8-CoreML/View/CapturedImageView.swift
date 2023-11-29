@@ -75,7 +75,7 @@ struct CapturedImageView: View {
                             .font(.system(size: 17, weight: .regular))
                             .foregroundColor(Color("labelColor"))
                             .frame(width: screenSize.width * 0.9, alignment: .topLeading)
-                            .lineLimit(expanded ? nil : 5)
+                            .lineLimit(expanded2 ? nil : 5)
 
                         //botão para expandir
                         Button{
