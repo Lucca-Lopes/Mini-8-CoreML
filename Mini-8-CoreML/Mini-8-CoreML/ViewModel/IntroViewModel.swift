@@ -9,9 +9,19 @@ import SwiftUI
 
 public class IntroViewModel : ObservableObject {
     @Published var imageTabs: [Tab] = [
-        .init(image: "Intro1"),
-        .init(image: "Intro2"),
-        .init(image: "Intro3"),
+    Tab(image: "Intro1"),
+    Tab(image: "Intro2"),
+        Tab(image: "Intro3"),
+        Tab(image: "Intro"),
+        Tab(image: "tutorial")
     ]
+    
+    let indexToShow = "Intro"
+    let indexDog = 3
+    
+  func sholdShow(for imageTabs:Tab) -> Bool
+    {
+        return imageTabs.image == indexToShow
+    }
 }
 

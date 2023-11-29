@@ -10,4 +10,5 @@ import Foundation
 struct Tab: Identifiable, Hashable {
     var id: String = UUID().uuidString
     var image: String
+    
 }
