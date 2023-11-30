@@ -10,6 +10,7 @@ struct CapturedImageView: View {
     @State var exportedView: UIImage? = nil
     @State var expanded: Bool = false
     @State var expanded2: Bool = false
+    @State var iconHeight: CGFloat = 22
         
     var body: some View {
         VStack{
@@ -33,10 +34,20 @@ struct CapturedImageView: View {
                         .font(.system(size: 22, weight: .semibold))
                         .foregroundColor(Color("labelColor"))
                     
-                    
-                    Image(systemName: "pawprint")
-                        .font(.system(size: 22, weight: .semibold))
-                        .foregroundStyle(Color("labelColor"))
+                    ZStack(alignment: .bottom){
+                        Image(systemName: "pawprint.fill")
+                            .frame(width: 22, height: vm.cgAccuracy * 0.22, alignment: .bottom)
+                            .clipped()
+                            .fontWeight(.semibold)
+                            .foregroundStyle(Color("labelColor"))
+
+                        
+                        Image(systemName: "pawprint")
+                            .frame(width: 22, height: 22)
+                            .clipped()
+                            .fontWeight(.semibold)
+                            .foregroundStyle(Color("labelColor"))
+                    }
                     
                 }
                 
@@ -55,15 +66,20 @@ struct CapturedImageView: View {
                             .foregroundColor(Color("labelColor"))
                             .frame(width: screenSize.width * 0.9, alignment: .topLeading)
                             .lineLimit(expanded ? nil : 5)
-                        
-                        //botão para expandir
-                        Button{
-                            expanded.toggle()
-                        } label: {
-                            Text(expanded ? "readLess" : "readMore")
+
+                        if vm.description == "healthyDescription"{
+                            
+                        } else if vm.description == "skinLesionDescription"{
+                        } else {
+                            //botão para expandir
+                            Button{
+                                expanded.toggle()
+                            } label: {
+                                Text(expanded ? "readLess" : "readMore")
+                            }
+                            .foregroundStyle(Color("AccentColor"))
+                            .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
                         }
-                        .foregroundStyle(Color("AccentColor"))
-                        .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
                         
                         //recomendações
                         Text("recommendation")
@@ -76,12 +92,17 @@ struct CapturedImageView: View {
                             .foregroundColor(Color("labelColor"))
                             .frame(width: screenSize.width * 0.9, alignment: .topLeading)
                             .lineLimit(expanded2 ? nil : 5)
-
-                        //botão para expandir
-                        Button{
-                            expanded2.toggle()
-                        } label: {
-                            Text(expanded2 ? "readLess" : "readMore")
+                        if vm.recommendation == "healthyRecomendation"{
+                            
+                        } else {
+                            //botão para expandir
+                            Button{
+                                expanded2.toggle()
+                            } label: {
+                                Text(expanded2 ? "readLess" : "readMore")
+                            }
+                            .foregroundStyle(Color("AccentColor"))
+                            .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
                         }
                     }
                 }
