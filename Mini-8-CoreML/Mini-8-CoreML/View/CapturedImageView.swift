@@ -83,8 +83,6 @@ struct CapturedImageView: View {
                         } label: {
                             Text(expanded2 ? "readLess" : "readMore")
                         }
-                        .foregroundStyle(Color("AccentColor"))
-                        .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
                     }
                 }
             }
