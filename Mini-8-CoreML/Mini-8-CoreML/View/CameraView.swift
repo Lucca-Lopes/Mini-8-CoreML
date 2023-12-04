@@ -33,6 +33,7 @@ struct CameraView: View {
                         vm.onChangeImage()
                     })
             }
+            .background(.black)
             .toolbar{
                 ToolbarItem(placement: .topBarTrailing) {
                     NavigationLink{

@@ -17,6 +17,7 @@ final class ClassificationViewModel: ObservableObject {
     
     @Published var classification: LocalizedStringKey = ""
     @Published var accuracy: String = ""
+    @Published var cgAccuracy: CGFloat = 0
     @Published var description: LocalizedStringKey = ""
     @Published var recommendation: LocalizedStringKey = ""
     
@@ -53,6 +54,12 @@ final class ClassificationViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] newAccuracies in
                 self?.accuracy = newAccuracies
+                do {
+                    self?.cgAccuracy = CGFloat( try Double(newAccuracies , format: .number))
+                    print("acurracia - \(self?.cgAccuracy ?? 0)")
+                } catch {
+                    print("erro - \(error.localizedDescription)")
+                }
             }
             .store(in: &subscribers)
     }
