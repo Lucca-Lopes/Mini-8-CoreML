@@ -8,15 +8,22 @@
 import SwiftUI
 
 struct LiveCamView: View {
-    @StateObject var vm = ClassificationViewModel()
+    @EnvironmentObject var vm : ClassificationViewModel
     var body: some View {
         ZStack{
             HostedViewController()
                 .environmentObject(vm)
-            HStack {
-                Text(vm.classification)
-                Text(" - ")
-                Text("\(vm.accuracy)%")
+            VStack{
+                HStack {
+                    Text(vm.classification)
+                    Text(" - ")
+                    Text("\(vm.accuracy)%")
+                }
+                Button {
+                    vm.canTakeImageDelegate?.setPhoto(canTakePhoto: true)
+                } label: {
+                    Image(systemName: "photo.stack")
+                }
             }
             
         }

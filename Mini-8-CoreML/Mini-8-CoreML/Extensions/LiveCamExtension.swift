@@ -26,8 +26,8 @@ extension LiveCamViewController {
     func detectionDidComplete(request: VNRequest, error: Error?) {
         DispatchQueue.main.async(execute: {
             if let results = request.results {
-                self.delegate?.getPrediction(prediction: results[0].description)
-                self.delegate?.getAccuracy(accuracy: results[0].confidence.description)
+                self.getDataDelegate?.getPrediction(prediction: results[0].description)
+                self.getDataDelegate?.getAccuracy(accuracy: results[0].confidence.description)
             }
         })
     }
@@ -35,11 +35,22 @@ extension LiveCamViewController {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .up, options: [:]) // Create handler to perform request on the buffer
-
+        
+        if canTakeImage {
+            let ciImage = CIImage(cvImageBuffer: pixelBuffer)
+            let image = UIImage(ciImage: ciImage)
+            self.image = image
+//            self.delegate?.getImage(image: image)
+        }
+        
         do {
             try imageRequestHandler.perform(self.requests) // Schedules vision requests to be performed
         } catch {
             print(error)
         }
+    }
+    
+    func captureImage(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection){
+        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
     }
 }

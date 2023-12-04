@@ -11,7 +11,7 @@ import SwiftUI
 @MainActor
 final class ClassificationViewModel: ObservableObject {
     
-    @Published var displayImagePicker: Bool = false
+//    @Published var displayImagePicker: Bool = false
     
     @Published var importedImage: UIImage? = nil
     
@@ -20,6 +20,9 @@ final class ClassificationViewModel: ObservableObject {
     @Published var cgAccuracy: CGFloat = 0
     @Published var description: LocalizedStringKey = ""
     @Published var recommendation: LocalizedStringKey = ""
+    
+    var getImageDelegate: ImageServiceProviding?
+    var canTakeImageDelegate: CanTakePhotoDelegate?
     
     let service: ClassificationServiceProviding
     
@@ -44,6 +47,16 @@ final class ClassificationViewModel: ObservableObject {
                 self?.classification = self?.adequateClassification(classification: newClassification) ?? ""
                 self?.description = self?.updateDescription(classification: newClassification) ?? ""
                 self?.recommendation = self?.updateRecomendation(classification: newClassification) ?? ""
+                
+            }
+            .store(in: &subscribers)
+    }
+    
+    func subscribeImage() {
+        self.getImageDelegate?.imageResultPub
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] newImage in
+                self?.importedImage = newImage
                 
             }
             .store(in: &subscribers)

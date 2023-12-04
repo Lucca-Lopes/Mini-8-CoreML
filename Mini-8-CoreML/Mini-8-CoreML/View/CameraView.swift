@@ -25,13 +25,15 @@ struct CameraView: View {
         }
         else {
             VStack{
-                CameraManeger(image: $image)
-                    .navigationBarBackButtonHidden()
-//                    .ignoresSafeArea()
-                    .onChange(of: image, perform: { value in
-                        vm.importedImage = value
-                        vm.onChangeImage()
-                    })
+                LiveCamView()
+                    .environmentObject(vm)
+//                CameraManeger(image: $image)
+//                    .navigationBarBackButtonHidden()
+////                    .ignoresSafeArea()
+//                    .onChange(of: image, perform: { value in
+//                        vm.importedImage = value
+//                        vm.onChangeImage()
+//                    })
             }
             .background(.black)
             .toolbar{
