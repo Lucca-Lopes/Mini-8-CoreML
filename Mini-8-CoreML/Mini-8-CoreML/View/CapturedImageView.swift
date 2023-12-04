@@ -54,7 +54,6 @@ struct CapturedImageView: View {
                 Divider()
                     .background(Color("labelColor"))
                 
-                ScrollView{
                     VStack(alignment: .leading){
                         //descrição
                         Text("description")
@@ -105,14 +104,13 @@ struct CapturedImageView: View {
                             .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
                         }
                     }
-                }
             }
             .padding(.horizontal)
-            .frame(width: screenSize.width, height: screenSize.height * 0.7, alignment: .top)
+            .frame(width: screenSize.width, height: expanded || expanded2 ? screenSize.height : screenSize.height * 0.7, alignment: .top)
             .background{
                 BackgroundView()
                     .clipShape(RoundedRectangle(cornerRadius: 30))
-                    .padding(.top, 250)
+                    .padding(.top, expanded || expanded2 ? 0 : 250)
             }
             
             .frame(height: screenSize.height * 0.45)
@@ -133,7 +131,7 @@ struct CapturedImageView: View {
                     Image(systemName: "square.and.arrow.up")
                         .fontWeight(.bold)
                 }
-                    .onAppear{
+                .onChange(of: self.vm.description){ newValue in
                         self.exportedView = ImageRenderer(content: self.body).uiImage!
                     }
 
