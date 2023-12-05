@@ -1,0 +1,24 @@
+{
+    "fileFormatVersion": "1.0.0",
+    "itemInfoEntries": {
+        "46B2BA59-D8B6-40FD-8D67-EABE6ABD8C8F": {
+            "author": "com.apple.CoreML",
+            "description": "External FeatureDescription Overlay",
+            "name": "FeatureDescriptions.json",
+            "path": "com.apple.CoreML/FeatureDescriptions.json"
+        },
+        "87A788B3-16BF-414A-A9FF-1289C50C6D7B": {
+            "author": "com.apple.CoreML",
+            "description": "CoreML Model Specification",
+            "name": "DogSkinLesion.mlmodel",
+            "path": "com.apple.CoreML/DogSkinLesion.mlmodel"
+        },
+        "FF69ECAB-AE62-4660-8B9F-B0CD6AB87E34": {
+            "author": "com.apple.CoreML",
+            "description": "External Metadata Overlay",
+            "name": "Metadata.json",
+            "path": "com.apple.CoreML/Metadata.json"
+        }
+    },
+    "rootModelIdentifier": "87A788B3-16BF-414A-A9FF-1289C50C6D7B"
+}

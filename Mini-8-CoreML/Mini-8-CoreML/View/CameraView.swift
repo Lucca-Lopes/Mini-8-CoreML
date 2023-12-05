@@ -32,6 +32,8 @@ struct CameraView: View {
                         vm.importedImage = value
                         vm.onChangeImage()
                     })
+            
+            
             }
             .toolbar{
                 ToolbarItem(placement: .topBarTrailing) {

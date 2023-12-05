@@ -13,6 +13,7 @@ struct CapturedImageView: View {
         
     var body: some View {
         VStack{
+            
             Image(uiImage: (vm.importedImage) ?? UIImage(named: "cachorro")!)
                 .resizable()
                 .scaledToFill()
