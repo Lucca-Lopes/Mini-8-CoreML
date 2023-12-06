@@ -23,7 +23,8 @@ struct InfoTextView: View {
                     
                 Text(infoText)
                     .frame(width: screenSize.width * 0.9, alignment: .topLeading)
-                    .font(.system(size: 17, weight: .regular))
+                    .font(.system(.headline))
+                    .fontWeight(.regular)
                     .foregroundColor(Color("labelColor"))
                     .multilineTextAlignment(.leading)
                     
@@ -43,7 +44,8 @@ struct InfoTextView: View {
                     ScrollView{
                         Text(infoText)
                             .frame(width: screenSize.width * 0.9, alignment: .topLeading)
-                            .font(.system(size: 17, weight: .regular))
+                            .font(.system(.headline))
+                            .fontWeight(.regular)
                             .foregroundColor(Color("labelColor"))
                             .multilineTextAlignment(.leading)
                     }
