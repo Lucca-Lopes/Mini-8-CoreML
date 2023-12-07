@@ -24,31 +24,32 @@ struct CameraView: View {
                 .ignoresSafeArea()
         }
         else {
-            VStack{
-                LiveCamView()
-                    .environmentObject(vm)
-//                CameraManeger(image: $image)
-//                    .navigationBarBackButtonHidden()
-////                    .ignoresSafeArea()
-//                    .onChange(of: image, perform: { value in
-//                        vm.importedImage = value
-//                        vm.onChangeImage()
-//                    })
-            }
-            .background(.black)
-            .toolbar{
-                ToolbarItem(placement: .topBarTrailing) {
-                    NavigationLink{
-                        InfoView()
-                    } label: {
-                        Image(systemName: "info.circle")
-                            .font(.system(size: 20))
-                            .fontWeight(.bold)
-                            .foregroundStyle(Color.white)
+            //            VStack{
+            
+            //                CameraManeger(image: $image)
+            //                    .navigationBarBackButtonHidden()
+            ////                    .ignoresSafeArea()
+            //                    .onChange(of: image, perform: { value in
+            //                        vm.importedImage = value
+            //                        vm.onChangeImage()
+            //                    })
+            //            }
+            LiveCamView()
+                .environmentObject(vm)
+                .background(.black)
+                .toolbar{
+                    ToolbarItem(placement: .topBarTrailing) {
+                        NavigationLink{
+                            InfoView()
+                        } label: {
+                            Image(systemName: "info.circle")
+                                .font(.system(size: 20))
+                                .fontWeight(.bold)
+                                .foregroundStyle(Color.white)
+                        }
                     }
+                    
                 }
-                
-            }
         }
     }
 }

@@ -22,14 +22,14 @@ protocol CanTakePhotoDelegate {
 }
 
 protocol ImageServiceProviding {
-    var imageResultPub: Published<UIImage>.Publisher { get }
+    var imageResultPub: Published<UIImage?>.Publisher { get }
 }
 
 class LiveCamViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, ImageServiceProviding, CanTakePhotoDelegate {
     var getDataDelegate: GetDataDelegate?
 //    var setPhotoDelegate: CanTakePhotoDelegate?
-    @Published var image: UIImage = UIImage()
-    var imageResultPub: Published<UIImage>.Publisher { $image }
+    @Published var image: UIImage? = nil
+    var imageResultPub: Published<UIImage?>.Publisher { $image }
     private var permissionGranted = false // Flag for permission
     private let captureSession = AVCaptureSession()
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
@@ -151,7 +151,9 @@ struct HostedViewController: UIViewControllerRepresentable, GetDataDelegate {
     func getPrediction(prediction: String) {
         var text = prediction.replacingCharacters(in: prediction.startIndex...prediction.firstIndex(of: "\"")!, with: "")
         text = String(text.dropLast(1))
-        vm.classification = LocalizedStringKey(text)
+        vm.classification = vm.adequateClassification(classification: text)
+        vm.description = vm.updateDescription(classification: text)
+        vm.recommendation = vm.updateRecomendation(classification: text)
     }
     
     func getAccuracy(accuracy: String) {
@@ -165,6 +167,7 @@ struct HostedViewController: UIViewControllerRepresentable, GetDataDelegate {
         viewController.getDataDelegate = self
         vm.getImageDelegate = viewController.self
         vm.canTakeImageDelegate = viewController.self
+        vm.subscribeImage()
         
         return viewController
         }

@@ -20,10 +20,14 @@ struct LiveCamView: View {
                     Text("\(vm.accuracy)%")
                 }
                 Button {
+                    print("LiveCamView - botão tirar foto - clicou")
                     vm.canTakeImageDelegate?.setPhoto(canTakePhoto: true)
                 } label: {
                     Image(systemName: "photo.stack")
+                        .imageScale(.large)
                 }
+                .padding(.top, 20)
+                
             }
             
         }

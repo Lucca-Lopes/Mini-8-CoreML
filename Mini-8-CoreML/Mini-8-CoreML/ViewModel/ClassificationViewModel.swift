@@ -37,6 +37,7 @@ final class ClassificationViewModel: ObservableObject {
         
         self.subscribeClassifications()
         self.subscribeAccuracies()
+//        self.subscribeImage()
         self.onChangeImage()
     }
     
@@ -57,6 +58,8 @@ final class ClassificationViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] newImage in
                 self?.importedImage = newImage
+                print(newImage)
+                self?.canTakeImageDelegate?.setPhoto(canTakePhoto: false)
                 
             }
             .store(in: &subscribers)
