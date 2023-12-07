@@ -10,7 +10,7 @@ struct CapturedImageView: View {
     @State var exportedView: UIImage? = nil
     @State var expanded: Bool = false
     @State var expanded2: Bool = false
-        
+    
     var body: some View {
         VStack{
             Image(uiImage: (vm.importedImage) ?? UIImage(named: "cachorro")!)
@@ -41,8 +41,8 @@ struct CapturedImageView: View {
                             .fontWeight(.semibold)
                             .foregroundColor(Color("labelColor"))
                             .accessibilityLabel("\(vm.accuracy) de acurácia")
-
-                    }                    
+                        
+                    }
                     
                     Image(systemName: "pawprint")
                         .font(.system(size: 22, weight: .semibold))
@@ -65,7 +65,7 @@ struct CapturedImageView: View {
                             .foregroundColor(Color("labelColor"))
                             .frame(width: screenSize.width * 0.9, alignment: .topLeading)
                             .lineLimit(expanded ? nil : 5)
-
+                        
                         if vm.description == "healthyDescription"{
                             
                         } else if vm.description == "skinLesionDescription"{
@@ -79,8 +79,6 @@ struct CapturedImageView: View {
                             .foregroundStyle(Color("AccentColor"))
                             .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
                         }
-                        .foregroundStyle(Color("AccentColor"))
-                        .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
                         
                         //recomendações
                         Text("recommendation")
@@ -93,7 +91,7 @@ struct CapturedImageView: View {
                             .foregroundColor(Color("labelColor"))
                             .frame(width: screenSize.width * 0.9, alignment: .topLeading)
                             .lineLimit(expanded2 ? nil : 5)
-
+                        
                         //botão para expandir
                         Button{
                             expanded2.toggle()
@@ -131,10 +129,10 @@ struct CapturedImageView: View {
                     Image(systemName: "square.and.arrow.up")
                         .fontWeight(.bold)
                 }
-                    .onAppear{
-                        self.exportedView = ImageRenderer(content: self.body).uiImage!
-                    }
-
+                .onAppear{
+                    self.exportedView = ImageRenderer(content: self.body).uiImage!
+                }
+                
             }
         }
         .accentColor(.white)

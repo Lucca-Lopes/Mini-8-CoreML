@@ -13,10 +13,10 @@ struct LiveCamView: View {
     @StateObject var photoVm = LiveCamViewController()
     var body: some View {
         ZStack{
-          
-                HostedViewController()
-                    .environmentObject(vm)
-                
+            
+            HostedViewController()
+                .environmentObject(vm)
+            
             
                 .overlay{
                     
@@ -44,14 +44,13 @@ struct LiveCamView: View {
                         
                         Divider()
                             .background(Color("labelColor"))
-                           
+                        
                     }
-                  
-                   
+                    
+                    
                 }
-                
-            }            
+            
         }
-            .ignoresSafeArea()
     }
+//        .ignoresSafeArea()
 }
