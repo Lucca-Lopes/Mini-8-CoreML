@@ -38,6 +38,7 @@ class LiveCamViewController: UIViewController, AVCaptureVideoDataOutputSampleBuf
     
     // Detector
     private var videoOutput = AVCaptureVideoDataOutput()
+    private var output = AVCapturePhotoOutput()
     var requests = [VNRequest]()
     var detectionLayer: CALayer! = nil
     
@@ -114,6 +115,15 @@ class LiveCamViewController: UIViewController, AVCaptureVideoDataOutputSampleBuf
         }
     }
     
+    func takePic(){
+        DispatchQueue.global(qos: .background).async {
+            
+            self.output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
+            self.captureSession.stopRunning()
+        }
+        
+    }
+    
     func setupCaptureSession() {
         // Camera input
         guard let videoDevice = AVCaptureDevice.default(.builtInDualWideCamera,for: .video, position: .back) else { return }
@@ -133,6 +143,8 @@ class LiveCamViewController: UIViewController, AVCaptureVideoDataOutputSampleBuf
         // Detector
         videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "sampleBufferQueue"))
         captureSession.addOutput(videoOutput)
+        
+        
         
         videoOutput.connection(with: .video)?.videoOrientation = .portrait
         
@@ -161,6 +173,8 @@ struct HostedViewController: UIViewControllerRepresentable, GetDataDelegate {
         text = text.suffix(2)
         vm.accuracy = String(text == ".0" ? "100" : text)
     }
+    
+
     
     func makeUIViewController(context: Context) -> UIViewController {
         let viewController = LiveCamViewController()

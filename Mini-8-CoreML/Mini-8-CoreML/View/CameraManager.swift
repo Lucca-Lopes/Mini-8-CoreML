@@ -39,6 +39,7 @@ struct CameraManeger: UIViewControllerRepresentable {
         let picker = UIImagePickerController()
         picker.sourceType = .camera
         picker.delegate = context.coordinator
+        picker.showsCameraControls = false
       
         return picker
     }

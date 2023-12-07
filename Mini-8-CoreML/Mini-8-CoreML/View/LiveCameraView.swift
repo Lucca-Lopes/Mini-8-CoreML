@@ -1,131 +1,127 @@
-////
-////  LiveCameraView.swift
-////  Mini-8-CoreML
-////
-////  Created by Lucca Lopes on 14/11/23.
-////
-//
-//import UIKit
-//import AVFoundation
-//
-//class LiveCameraView: UIViewController, AVCapturePhotoCaptureDelegate {
-//    
-//    // MARK: - Variables
-//    lazy private var backButton: UIButton = {
-//        let button = UIButton(type: .system)
-//        button.setImage(UIImage(systemName: "xmark"), for: .normal)
-//        button.addTarget(self, action: #selector(handleDismiss), for: .touchUpInside)
-//        button.tintColor = .white
-//        return button
-//    }()
-//    
-//    lazy private var takePhotoButton: UIButton = {
-//        let button = UIButton(type: .system)
-//        button.setImage(UIImage(named: "capture_photo")?.withRenderingMode(.alwaysOriginal), for: .normal)
-//        button.addTarget(self, action: #selector(handleTakePhoto), for: .touchUpInside)
-//        return button
-//    }()
-//    
-//    private let photoOutput = AVCapturePhotoOutput()
-//    
-//    
-//    // MARK: - View LifeCycle
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        openCamera()
-//    }
-//    
-//    
-//    // MARK: - Private Methods
-//    private func setupUI() {
-//        
-//        view.addSubviews(backButton, takePhotoButton)
-//        
-//        takePhotoButton.makeConstraints(top: nil, left: nil, right: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, topMargin: 0, leftMargin: 0, rightMargin: 0, bottomMargin: 15, width: 80, height: 80)
-//        takePhotoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//        
-//        backButton.makeConstraints(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: view.bottomAnchor, topMargin: 15, leftMargin: 0, rightMargin: 10, bottomMargin: 0, width: 50, height: 50)
-//    }
-//    
-//    private func openCamera() {
-//        switch AVCaptureDevice.authorizationStatus(for: .video) {
-//        case .authorized: // the user has already authorized to access the camera.
-//            self.setupCaptureSession()
-//            
-//        case .notDetermined: // the user has not yet asked for camera access.
-//            AVCaptureDevice.requestAccess(for: .video) { (granted) in
-//                if granted { // if user has granted to access the camera.
-//                    print("the user has granted to access the camera")
-//                    DispatchQueue.main.async {
-//                        self.setupCaptureSession()
-//                    }
-//                } else {
-//                    print("the user has not granted to access the camera")
-//                    self.handleDismiss()
-//                }
-//            }
-//            
-//        case .denied:
-//            print("the user has denied previously to access the camera.")
-//            self.handleDismiss()
-//            
-//        case .restricted:
-//            print("the user can't give camera access due to some restriction.")
-//            self.handleDismiss()
-//            
-//        default:
-//            print("something has wrong due to we can't access the camera.")
-//            self.handleDismiss()
-//        }
-//    }
-//    
-//    private func setupCaptureSession() {
-//        let captureSession = AVCaptureSession()
-//        
-//        if let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) {
-//            do {
-//                let input = try AVCaptureDeviceInput(device: captureDevice)
-//                if captureSession.canAddInput(input) {
-//                    captureSession.addInput(input)
-//                }
-//            } catch let error {
-//                print("Failed to set input device with error: \(error)")
-//            }
-//            
-//            if captureSession.canAddOutput(photoOutput) {
-//                captureSession.addOutput(photoOutput)
-//            }
-//            
-//            let cameraLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-//            cameraLayer.frame = self.view.frame
-//            cameraLayer.videoGravity = .resizeAspectFill
-//            self.view.layer.addSublayer(cameraLayer)
-//            
-//            captureSession.startRunning()
-//            self.setupUI()
-//        }
-//    }
-//    
-//    @objc private func handleDismiss() {
-//        DispatchQueue.main.async {
-//            self.dismiss(animated: true, completion: nil)
-//        }
-//    }
-//    
-//    @objc private func handleTakePhoto() {
-//        let photoSettings = AVCapturePhotoSettings()
-//        if let photoPreviewType = photoSettings.availablePreviewPhotoPixelFormatTypes.first {
-//            photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String: photoPreviewType]
-//            photoOutput.capturePhoto(with: photoSettings, delegate: self)
-//        }
-//    }
-//    
-//    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-//        guard let imageData = photo.fileDataRepresentation() else { return }
-//        let previewImage = UIImage(data: imageData)
-//        
-//        let photoPreviewContainer = PhotoPreviewView(frame: self.view.frame)
-//        photoPreviewContainer.photoImageView.image = previewImage
-//        self.view.addSubviews(photoPreviewContainer)
-//    }
-//}
+import SwiftUI
+
+struct LiveCameraView: View {
+    @EnvironmentObject var vm: ClassificationViewModel
+    @Environment (\.dismiss) var dismiss
+    @Environment (\.screenSize) var screenSize
+    
+    @State var exportedView: UIImage? = nil
+    @State var expanded: Bool = false
+    @State var expanded2: Bool = false
+        
+    var body: some View {
+        
+        
+   
+            
+    
+            
+            //view de descrição da doença do cachorro
+            VStack{
+                //nome da doença e acurácia
+                HStack(alignment: .center){
+                    Text(vm.classification)
+                        .font(.system(size: 22, weight: .semibold))
+                        .foregroundColor(Color("labelColor"))
+                    
+                    Spacer()
+                    
+                    Text("\(vm.accuracy)%")
+                        .font(.system(size: 22, weight: .semibold))
+                        .foregroundColor(Color("labelColor"))
+                        .accessibilityLabel("\(vm.accuracy) de acurácia")
+                    
+                    
+                    Image(systemName: "pawprint")
+                        .font(.system(size: 22, weight: .semibold))
+                        .foregroundStyle(Color("labelColor"))
+                    
+                }
+                
+                Divider()
+                    .background(Color("labelColor"))
+                
+                ScrollView{
+                    VStack(alignment: .leading){
+                        //descrição
+                        Text("description")
+                            .font(.system(size: 20, weight: .semibold))
+                            .foregroundColor(Color("labelColor"))
+                            .padding(.vertical)
+                        Text(vm.description)
+                            .font(.system(size: 17, weight: .regular))
+                            .foregroundColor(Color("labelColor"))
+                            .frame(width: screenSize.width * 0.9, alignment: .topLeading)
+                            .lineLimit(expanded ? nil : 5)
+                            .accessibilityAddTraits(.isHeader)
+                        
+                        //botão para expandir
+                        Button{
+                            expanded.toggle()
+                        } label: {
+                            Text(expanded ? "readLess" : "readMore")
+                        }
+                        .foregroundStyle(Color("AccentColor"))
+                        .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
+                        
+                        
+                        //recomendações
+                        Text("recommendation")
+                            .font(.system(size: 20, weight: .semibold))
+                            .foregroundColor(Color("labelColor"))
+                            .padding(.vertical)
+                            .accessibilityAddTraits(.isHeader)
+                        
+                        Text(vm.recommendation)
+                            .font(.system(size: 17, weight: .regular))
+                            .foregroundColor(Color("labelColor"))
+                            .frame(width: screenSize.width * 0.9, alignment: .topLeading)
+                            .lineLimit(expanded2 ? nil : 5)
+
+                        //botão para expandir
+                        Button{
+                            expanded2.toggle()
+                        } label: {
+                            Text(expanded2 ? "readLess" : "readMore")
+                        }
+                        .foregroundStyle(Color("AccentColor"))
+                        .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
+                    }
+                }
+            }
+            .padding(.horizontal)
+            .frame(width: screenSize.width, height: screenSize.height * 0.7, alignment: .top)
+            .background{
+                BackgroundView()
+                    .clipShape(RoundedRectangle(cornerRadius: 30))
+                    .padding(.top, 250)
+            }
+            
+            .frame(height: screenSize.height * 0.45)
+       
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button{
+                    vm.importedImage = nil
+                } label: {
+                    Image(systemName: "chevron.backward")
+                        .fontWeight(.bold)
+                }
+            }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                ShareLink(item: Image(uiImage: self.exportedView ?? UIImage()), preview: SharePreview("Teste", image: Image(uiImage: self.exportedView ?? UIImage()))){
+                    Image(systemName: "square.and.arrow.up")
+                        .fontWeight(.bold)
+                }
+                    .onAppear{
+                        self.exportedView = ImageRenderer(content: self.body).uiImage!
+                    }
+
+            }
+        }
+        .accentColor(.white)
+    }
+}
+
