@@ -15,34 +15,40 @@ struct InfoTextView: View {
     var infoTitle: LocalizedStringKey
     var diseases: [LocalizedStringKey] = ["healthy", "circularAlopecia", "keratosis", "skinLesion"]
     var diseasesDescription: [LocalizedStringKey] = ["healthyDescription", "circularAlopeciaDescription", "keratosisDescription", "skinLesionDescription"]
-
+    
     
     var body: some View {
-            VStack(alignment: .leading){
-                if infoText == "diseasesText"{
-                    
+        VStack(alignment: .leading){
+            if infoText == "diseasesText"{
+                
                 Text(infoText)
                     .frame(width: screenSize.width * 0.9, alignment: .topLeading)
                     .font(.system(.headline))
                     .fontWeight(.regular)
                     .foregroundColor(Color("labelColor"))
                     .multilineTextAlignment(.leading)
-                    
-                        List{
-                            ForEach(0..<diseases.count, id: \.self) { i in
-                            DisclosureGroup{
-                                Text(diseasesDescription[i])
-                            } label: {
-                                Text(diseases[i])
-                            }
-                            .foregroundStyle(Color("labelColor"))
-                            .padding(.vertical)
+                
+                List{
+                    ForEach(0..<diseases.count, id: \.self) { i in
+                        DisclosureGroup{
+                            Text(diseasesDescription[i])
+                        } label: {
+                            Text(diseases[i])
                         }
+                        .foregroundStyle(Color("labelColor"))
+                        .padding(.vertical)
                     }
-                    .scrollContentBackground(.hidden)
-                } else {
-                    ScrollView{
-                        Text(infoText)
+                }
+                .scrollContentBackground(.hidden)
+            } else if infoText == "datasetText"{
+                ScrollView{
+                    Text(infoText)
+                        .frame(width: screenSize.width * 0.9, alignment: .topLeading)
+                        .font(.system(size: 17, weight: .regular))
+                        .foregroundColor(Color("labelColor"))
+                        .multilineTextAlignment(.leading)
+                    Link(destination: .init(string: "https://universe.roboflow.com/captain-blank-bodop/sample-k1xk8")!) {
+                        Text("https://universe.roboflow.com/captain-blank-bodop/sample-k1xk8")
                             .frame(width: screenSize.width * 0.9, alignment: .topLeading)
                             .font(.system(.headline))
                             .fontWeight(.regular)
@@ -50,11 +56,20 @@ struct InfoTextView: View {
                             .multilineTextAlignment(.leading)
                     }
                 }
+            } else {
+                ScrollView{
+                    Text(infoText)
+                        .frame(width: screenSize.width * 0.9, alignment: .topLeading)
+                        .font(.system(size: 17, weight: .regular))
+                        .foregroundColor(Color("labelColor"))
+                        .multilineTextAlignment(.leading)
+                }
             }
-            .padding(.horizontal)
-            .padding(.vertical, 30)
-            .navigationTitle(infoTitle)
-            .frame(width: screenSize.width, height: screenSize.height, alignment: .topLeading)
-            .background(Color("backgroundColor"))
+        }
+        .padding(.horizontal)
+        .padding(.vertical, 30)
+        .navigationTitle(infoTitle)
+        .frame(width: screenSize.width, height: screenSize.height, alignment: .topLeading)
+        .background(Color("backgroundColor"))
     }
 }
