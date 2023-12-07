@@ -18,6 +18,10 @@ struct BotaoProximoView: View {
                             .fill(Color("AccentColor"))
                             .frame(width: screenSize.width * 0.3, height: screenSize.height * 0.05)
                     )
+                    .accessibilityAddTraits(.isButton)
+                    .accessibilityLabel("Botão de próximo")
+                    .accessibilityHint("Clique para ir para a próxima tela")
+                    
             }
         }
     }

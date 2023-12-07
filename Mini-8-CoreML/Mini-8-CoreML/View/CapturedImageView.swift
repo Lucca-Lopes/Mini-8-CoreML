@@ -12,6 +12,8 @@ struct CapturedImageView: View {
     @State var expanded2: Bool = false
         
     var body: some View {
+        
+        
         VStack{
             
             Image(uiImage: (vm.importedImage) ?? UIImage(named: "cachorro")!)
@@ -33,6 +35,7 @@ struct CapturedImageView: View {
                     Text("\(vm.accuracy)%")
                         .font(.system(size: 22, weight: .semibold))
                         .foregroundColor(Color("labelColor"))
+                        .accessibilityLabel("\(vm.accuracy) de acurácia")
                     
                     
                     Image(systemName: "pawprint")
@@ -56,6 +59,7 @@ struct CapturedImageView: View {
                             .foregroundColor(Color("labelColor"))
                             .frame(width: screenSize.width * 0.9, alignment: .topLeading)
                             .lineLimit(expanded ? nil : 5)
+                            .accessibilityAddTraits(.isHeader)
                         
                         //botão para expandir
                         Button{
@@ -66,11 +70,13 @@ struct CapturedImageView: View {
                         .foregroundStyle(Color("AccentColor"))
                         .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
                         
+                        
                         //recomendações
                         Text("recommendation")
                             .font(.system(size: 20, weight: .semibold))
                             .foregroundColor(Color("labelColor"))
                             .padding(.vertical)
+                            .accessibilityAddTraits(.isHeader)
                         
                         Text(vm.recommendation)
                             .font(.system(size: 17, weight: .regular))
