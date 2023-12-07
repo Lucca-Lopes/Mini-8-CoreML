@@ -12,6 +12,7 @@
 		40423A262B029F3200AF4A40 /* InfoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40423A252B029F3200AF4A40 /* InfoTextView.swift */; };
 		40423A292B02B46100AF4A40 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40423A2B2B02B46100AF4A40 /* Localizable.strings */; };
 		40423A2E2B03F29800AF4A40 /* CapturedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40423A2D2B03F29800AF4A40 /* CapturedImageView.swift */; };
+		40A43D322B1908B90099DF56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40A43D342B1908B90099DF56 /* InfoPlist.strings */; };
 		40FD79662AFD6E4800F4C040 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FD79652AFD6E4800F4C040 /* BackgroundView.swift */; };
 		DF210EA02B040FAF00EF47C1 /* LiveCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF210E9F2B040FAF00EF47C1 /* LiveCameraView.swift */; };
 		DF555A202B0E731D00F32EF6 /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF555A1F2B0E731D00F32EF6 /* IntroViewModel.swift */; };
@@ -29,7 +30,6 @@
 		DFC6A23C2B17B1750019F4D3 /* LiveCamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6A23B2B17B1750019F4D3 /* LiveCamViewController.swift */; };
 		DFC6A23F2B17B2020019F4D3 /* LiveCamExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6A23E2B17B2020019F4D3 /* LiveCamExtension.swift */; };
 		DFC6A2412B17B2A60019F4D3 /* LiveCamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6A2402B17B2A60019F4D3 /* LiveCamView.swift */; };
-		DFC6A24A2B17CC6E0019F4D3 /* EnglishInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFC6A24C2B17CC6E0019F4D3 /* EnglishInfo.plist */; };
 		DFD79DF42B1517B20055DCDF /* IntroducaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD79DF32B1517B20055DCDF /* IntroducaoView.swift */; };
 		DFEB08D82AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08D72AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel */; };
 		DFEB08DA2AFD6CF300B0E66A /* ClassificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB08D92AFD6CF300B0E66A /* ClassificationViewModel.swift */; };
@@ -63,6 +63,8 @@
 		40423A2A2B02B46100AF4A40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		40423A2C2B02B46600AF4A40 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		40423A2D2B03F29800AF4A40 /* CapturedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturedImageView.swift; sourceTree = "<group>"; };
+		40A43D332B1908B90099DF56 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		40A43D352B1908BB0099DF56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		40FD79652AFD6E4800F4C040 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		DF210E9F2B040FAF00EF47C1 /* LiveCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCameraView.swift; sourceTree = "<group>"; };
 		DF555A1F2B0E731D00F32EF6 /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
@@ -83,7 +85,6 @@
 		DFC6A23E2B17B2020019F4D3 /* LiveCamExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCamExtension.swift; sourceTree = "<group>"; };
 		DFC6A2402B17B2A60019F4D3 /* LiveCamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCamView.swift; sourceTree = "<group>"; };
 		DFC6A2442B17CBB90019F4D3 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "pt-BR"; path = "pt-BR.lproj/Info.plist"; sourceTree = "<group>"; };
-		DFC6A24B2B17CC6E0019F4D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/EnglishInfo.plist; sourceTree = "<group>"; };
 		DFCC82FE2B0D2AF000C8B723 /* Mini-8-CoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-8-CoreML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD79DF32B1517B20055DCDF /* IntroducaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroducaoView.swift; sourceTree = "<group>"; };
 		DFEB08D72AFD6C6100B0E66A /* DogSkinDiseaseImageClassification 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "DogSkinDiseaseImageClassification 1.mlmodel"; sourceTree = "<group>"; };
@@ -162,6 +163,7 @@
 		DF6537132AF1A10200B482DD = {
 			isa = PBXGroup;
 			children = (
+				40A43D342B1908B90099DF56 /* InfoPlist.strings */,
 				40423A2B2B02B46100AF4A40 /* Localizable.strings */,
 				DF65371E2AF1A10200B482DD /* Mini-8-CoreML */,
 				DF65372F2AF1A10300B482DD /* Mini-8-CoreMLTests */,
@@ -176,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				DFC6A2432B17CBB60019F4D3 /* Info.plist */,
-				DFC6A24C2B17CC6E0019F4D3 /* EnglishInfo.plist */,
 				DF65371F2AF1A10200B482DD /* Mini_8_CoreMLApp.swift */,
 				DF4A3D072AFD602100BC3E28 /* Model */,
 				DF4A3D062AFD601500BC3E28 /* ViewModel */,
@@ -345,9 +346,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF6537272AF1A10300B482DD /* Preview Assets.xcassets in Resources */,
-				DFC6A24A2B17CC6E0019F4D3 /* EnglishInfo.plist in Resources */,
 				40423A292B02B46100AF4A40 /* Localizable.strings in Resources */,
 				DF6537242AF1A10300B482DD /* Assets.xcassets in Resources */,
+				40A43D322B1908B90099DF56 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,20 +441,21 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
+		40A43D342B1908B90099DF56 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40A43D332B1908B90099DF56 /* pt-BR */,
+				40A43D352B1908BB0099DF56 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		DFC6A2432B17CBB60019F4D3 /* Info.plist */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DFC6A2442B17CBB90019F4D3 /* pt-BR */,
 			);
 			name = Info.plist;
-			sourceTree = "<group>";
-		};
-		DFC6A24C2B17CC6E0019F4D3 /* EnglishInfo.plist */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DFC6A24B2B17CC6E0019F4D3 /* en */,
-			);
-			name = EnglishInfo.plist;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -590,7 +592,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini-8-CoreML/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = FurDog;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				INFOPLIST_KEY_NSCameraUsageDescription = "By granting permission to use the camera, the app will be able to check for possible diseases on a dog's skin";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -603,11 +605,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Lucca-Lopes.Mini-8-CoreML2";
+				PRODUCT_BUNDLE_IDENTIFIER = "Lucca-Lopes.Mini-8-CoreML";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -624,7 +629,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini-8-CoreML/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = FurDog;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				INFOPLIST_KEY_NSCameraUsageDescription = "By granting permission to use the camera, the app will be able to check for possible diseases on a dog's skin";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -637,11 +642,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Lucca-Lopes.Mini-8-CoreML2";
+				PRODUCT_BUNDLE_IDENTIFIER = "Lucca-Lopes.Mini-8-CoreML";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

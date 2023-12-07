@@ -8,50 +8,27 @@
 import SwiftUI
 
 struct LiveCamView: View {
-    @Environment (\.screenSize) var screenSize
-    @StateObject var vm = ClassificationViewModel()
-    @StateObject var photoVm = LiveCamViewController()
+    @EnvironmentObject var vm : ClassificationViewModel
     var body: some View {
         ZStack{
-          
-                HostedViewController()
-                    .environmentObject(vm)
-                
-            
-                .overlay{
-                    
-                    VStack{
-                        //nome da doença e acurácia
-                        HStack(alignment: .center){
-                            Text(vm.classification)
-                                .font(.system(size: 22, weight: .semibold))
-                                .foregroundColor(Color("labelColor"))
-                            
-                            Spacer()
-                            
-                            Text("\(vm.accuracy)%")
-                                .font(.system(size: 22, weight: .semibold))
-                                .foregroundColor(Color("labelColor"))
-                                .accessibilityLabel("\(vm.accuracy) de acurácia")
-                            
-                            
-                            Image(systemName: "pawprint")
-                                .font(.system(size: 22, weight: .semibold))
-                                .foregroundStyle(Color("labelColor"))
-                            
-                        }
-                        
-                        
-                        Divider()
-                            .background(Color("labelColor"))
-                           
-                    }
-                  
-                   
+            HostedViewController()
+                .environmentObject(vm)
+            VStack{
+                HStack {
+                    Text(vm.classification)
+                    Text(" - ")
+                    Text("\(vm.accuracy)%")
                 }
+                Button {
+                    print("LiveCamView - botão tirar foto - clicou")
+                    vm.canTakeImageDelegate?.setPhoto(canTakePhoto: true)
+                } label: {
+                    Image(systemName: "photo.stack")
+                        .imageScale(.large)
+                }
+                .padding(.top, 20)
                 
-            } .ignoresSafeArea()
-            
+            }            
         }
            
     }

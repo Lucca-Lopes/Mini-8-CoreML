@@ -120,3 +120,8 @@ This policy is effective as of 2023-11-28";
 
 "cameraAccess" = "By granting permission to use the camera, the app will be able to check for possible diseases on a dog's skin";
 
+"confidence" = "Confidence";
+
+"dataset" = "Dataset Source";
+
+"datasetText" = "The image dataset used in the app's development comes from a public dataset available in the Roboflow website and can be found in the following link: ";

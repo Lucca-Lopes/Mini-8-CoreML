@@ -11,14 +11,18 @@ import SwiftUI
 @MainActor
 final class ClassificationViewModel: ObservableObject {
     
-    @Published var displayImagePicker: Bool = false
+//    @Published var displayImagePicker: Bool = false
     
     @Published var importedImage: UIImage? = nil
     
     @Published var classification: LocalizedStringKey = ""
     @Published var accuracy: String = ""
+    @Published var cgAccuracy: CGFloat = 0
     @Published var description: LocalizedStringKey = ""
     @Published var recommendation: LocalizedStringKey = ""
+    
+    var getImageDelegate: ImageServiceProviding?
+    var canTakeImageDelegate: CanTakePhotoDelegate?
     
     let service: ClassificationServiceProviding
     
@@ -33,6 +37,7 @@ final class ClassificationViewModel: ObservableObject {
         
         self.subscribeClassifications()
         self.subscribeAccuracies()
+//        self.subscribeImage()
         self.onChangeImage()
     }
     
@@ -48,11 +53,29 @@ final class ClassificationViewModel: ObservableObject {
             .store(in: &subscribers)
     }
     
+    func subscribeImage() {
+        self.getImageDelegate?.imageResultPub
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] newImage in
+                self?.importedImage = newImage
+                print(newImage)
+                self?.canTakeImageDelegate?.setPhoto(canTakePhoto: false)
+                
+            }
+            .store(in: &subscribers)
+    }
+    
     func subscribeAccuracies(){
         self.service.accuraciesResultPub
             .receive(on: DispatchQueue.main)
             .sink { [weak self] newAccuracies in
                 self?.accuracy = newAccuracies
+                do {
+                    self?.cgAccuracy = CGFloat( try Double(newAccuracies , format: .number))
+                    print("acurracia - \(self?.cgAccuracy ?? 0)")
+                } catch {
+                    print("erro - \(error.localizedDescription)")
+                }
             }
             .store(in: &subscribers)
     }
