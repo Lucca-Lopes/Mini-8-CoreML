@@ -21,7 +21,7 @@ struct ContentView: View {
 //            IntroView(introPresented: $introPresented)            
             if let presented = introPresented {
                 if presented{
-                   LiveCameraView()
+                    CameraView()
                 } else {
                     IntroView(introPresented: $introPresented)
                 }

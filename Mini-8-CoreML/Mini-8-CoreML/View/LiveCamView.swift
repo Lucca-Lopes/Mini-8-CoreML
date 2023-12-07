@@ -28,8 +28,9 @@ struct LiveCamView: View {
                 }
                 .padding(.top, 20)
                 
-            }            
+            }
+            
         }
-           
+            .ignoresSafeArea()
     }
-
+}

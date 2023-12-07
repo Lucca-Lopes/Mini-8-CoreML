@@ -13,10 +13,7 @@ struct CapturedImageView: View {
     @State var iconHeight: CGFloat = 22
         
     var body: some View {
-        
-        
         VStack{
-            
             Image(uiImage: (vm.importedImage) ?? UIImage(named: "cachorro")!)
                 .resizable()
                 .scaledToFill()
@@ -39,13 +36,11 @@ struct CapturedImageView: View {
                             .font(.system(.title2))
                             .fontWeight(.semibold)
                             .foregroundColor(Color("labelColor"))
-                            .accessibilityLabel("\(vm.accuracy) de acurácia")
                         
                         Text("confidence")
                             .font(.system(.headline))
                             .fontWeight(.semibold)
                             .foregroundColor(Color("labelColor"))
-                            .accessibilityLabel("\(vm.accuracy) de acurácia")
 
                     }
                     
@@ -87,15 +82,20 @@ struct CapturedImageView: View {
                             .foregroundColor(Color("labelColor"))
                             .frame(width: screenSize.width * 0.9, alignment: .topLeading)
                             .lineLimit(expanded ? nil : 5)
-                            .accessibilityAddTraits(.isHeader)
-                        
-                        //botão para expandir
-                        Button{
-                            expanded.toggle()
-                        } label: {
-                            Text(expanded ? "readLess" : "readMore")
+
+                        if vm.description == "healthyDescription"{
+                            
+                        } else if vm.description == "skinLesionDescription"{
+                        } else {
+                            //botão para expandir
+                            Button{
+                                expanded.toggle()
+                            } label: {
+                                Text(expanded ? "readLess" : "readMore")
+                            }
+                            .foregroundStyle(Color("AccentColor"))
+                            .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
                         }
-                        
                         
                         //recomendações
                         Text("recommendation")
@@ -103,7 +103,6 @@ struct CapturedImageView: View {
                             .fontWeight(.semibold)
                             .foregroundColor(Color("labelColor"))
                             .padding(.vertical)
-                            .accessibilityAddTraits(.isHeader)
                         
                         Text(vm.recommendation)
                             .font(.headline)
