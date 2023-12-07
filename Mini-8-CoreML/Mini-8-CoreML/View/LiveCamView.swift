@@ -13,15 +13,46 @@ struct LiveCamView: View {
     @StateObject var photoVm = LiveCamViewController()
     var body: some View {
         ZStack{
-            HostedViewController()
-                .environmentObject(vm)
-            VStack{
-               
-                CapturedImageView()
+          
+                HostedViewController()
                     .environmentObject(vm)
                 
-            }
+            
+                .overlay{
+                    
+                    VStack{
+                        //nome da doença e acurácia
+                        HStack(alignment: .center){
+                            Text(vm.classification)
+                                .font(.system(size: 22, weight: .semibold))
+                                .foregroundColor(Color("labelColor"))
+                            
+                            Spacer()
+                            
+                            Text("\(vm.accuracy)%")
+                                .font(.system(size: 22, weight: .semibold))
+                                .foregroundColor(Color("labelColor"))
+                                .accessibilityLabel("\(vm.accuracy) de acurácia")
+                            
+                            
+                            Image(systemName: "pawprint")
+                                .font(.system(size: 22, weight: .semibold))
+                                .foregroundStyle(Color("labelColor"))
+                            
+                        }
+                        
+                        
+                        Divider()
+                            .background(Color("labelColor"))
+                           
+                    }
+                  
+                   
+                }
+                
+            } .ignoresSafeArea()
+            
         }
-            .ignoresSafeArea()
+           
     }
-}
+
