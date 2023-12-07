@@ -10,7 +10,6 @@ struct CapturedImageView: View {
     @State var exportedView: UIImage? = nil
     @State var expanded: Bool = false
     @State var expanded2: Bool = false
-    @State var iconHeight: CGFloat = 22
         
     var body: some View {
         VStack{
@@ -25,8 +24,7 @@ struct CapturedImageView: View {
                 //nome da doença e acurácia
                 HStack(alignment: .center){
                     Text(vm.classification)
-                        .font(.system(.title2))
-                        .fontWeight(.semibold)
+                        .font(.system(size: 22, weight: .semibold))
                         .foregroundColor(Color("labelColor"))
                     
                     Spacer()
@@ -36,49 +34,34 @@ struct CapturedImageView: View {
                             .font(.system(.title2))
                             .fontWeight(.semibold)
                             .foregroundColor(Color("labelColor"))
+                            .accessibilityLabel("\(vm.accuracy) de acurácia")
                         
                         Text("confidence")
                             .font(.system(.headline))
                             .fontWeight(.semibold)
                             .foregroundColor(Color("labelColor"))
+                            .accessibilityLabel("\(vm.accuracy) de acurácia")
 
-                    }
+                    }                    
                     
-                    ZStack(alignment: .bottom){
-                        Image(systemName: "pawprint.fill")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 33, height: vm.cgAccuracy * 0.33, alignment: .bottom)
-                            .clipped()
-                            .fontWeight(.semibold)
-                            .foregroundStyle(Color("labelColor"))
-
-                        
-                        Image(systemName: "pawprint")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 33, height: 33, alignment: .bottom)
-                            .clipped()
-                            .fontWeight(.semibold)
-                            .foregroundStyle(Color("labelColor"))
-                    }
+                    Image(systemName: "pawprint")
+                        .font(.system(size: 22, weight: .semibold))
+                        .foregroundStyle(Color("labelColor"))
                     
                 }
-                .padding(.bottom)
                 
                 Divider()
                     .background(Color("labelColor"))
                 
+                ScrollView{
                     VStack(alignment: .leading){
                         //descrição
                         Text("description")
-                            .font(.system(.title3))
-                            .fontWeight(.semibold)
+                            .font(.system(size: 20, weight: .semibold))
                             .foregroundColor(Color("labelColor"))
                             .padding(.vertical)
                         Text(vm.description)
-                            .font(.headline)
-                            .fontWeight(.regular)
+                            .font(.system(size: 17, weight: .regular))
                             .foregroundColor(Color("labelColor"))
                             .frame(width: screenSize.width * 0.9, alignment: .topLeading)
                             .lineLimit(expanded ? nil : 5)
@@ -96,40 +79,38 @@ struct CapturedImageView: View {
                             .foregroundStyle(Color("AccentColor"))
                             .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
                         }
+                        .foregroundStyle(Color("AccentColor"))
+                        .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
                         
                         //recomendações
                         Text("recommendation")
-                            .font(.system(.title3))
-                            .fontWeight(.semibold)
+                            .font(.system(size: 20, weight: .semibold))
                             .foregroundColor(Color("labelColor"))
                             .padding(.vertical)
                         
                         Text(vm.recommendation)
-                            .font(.headline)
-                            .fontWeight(.regular)
+                            .font(.system(size: 17, weight: .regular))
                             .foregroundColor(Color("labelColor"))
                             .frame(width: screenSize.width * 0.9, alignment: .topLeading)
                             .lineLimit(expanded2 ? nil : 5)
-                        if vm.recommendation == "healthyRecomendation"{
-                            
-                        } else {
-                            //botão para expandir
-                            Button{
-                                expanded2.toggle()
-                            } label: {
-                                Text(expanded2 ? "readLess" : "readMore")
-                            }
-                            .foregroundStyle(Color("AccentColor"))
-                            .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
+
+                        //botão para expandir
+                        Button{
+                            expanded2.toggle()
+                        } label: {
+                            Text(expanded2 ? "readLess" : "readMore")
                         }
+                        .foregroundStyle(Color("AccentColor"))
+                        .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
                     }
+                }
             }
             .padding(.horizontal)
-            .frame(width: screenSize.width, height: expanded || expanded2 ? screenSize.height : screenSize.height * 0.7, alignment: .top)
+            .frame(width: screenSize.width, height: screenSize.height * 0.7, alignment: .top)
             .background{
                 BackgroundView()
                     .clipShape(RoundedRectangle(cornerRadius: 30))
-                    .padding(.top, expanded || expanded2 ? 0 : 250)
+                    .padding(.top, 250)
             }
             
             .frame(height: screenSize.height * 0.45)
@@ -150,7 +131,7 @@ struct CapturedImageView: View {
                     Image(systemName: "square.and.arrow.up")
                         .fontWeight(.bold)
                 }
-                .onChange(of: self.vm.description){ newValue in
+                    .onAppear{
                         self.exportedView = ImageRenderer(content: self.body).uiImage!
                     }
 
