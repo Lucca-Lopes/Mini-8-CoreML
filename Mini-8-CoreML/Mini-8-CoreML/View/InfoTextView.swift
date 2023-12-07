@@ -23,7 +23,8 @@ struct InfoTextView: View {
                 
                 Text(infoText)
                     .frame(width: screenSize.width * 0.9, alignment: .topLeading)
-                    .font(.system(size: 17, weight: .regular))
+                    .font(.system(.headline))
+                    .fontWeight(.regular)
                     .foregroundColor(Color("labelColor"))
                     .multilineTextAlignment(.leading)
                 
@@ -49,7 +50,8 @@ struct InfoTextView: View {
                     Link(destination: .init(string: "https://universe.roboflow.com/captain-blank-bodop/sample-k1xk8")!) {
                         Text("https://universe.roboflow.com/captain-blank-bodop/sample-k1xk8")
                             .frame(width: screenSize.width * 0.9, alignment: .topLeading)
-                            .font(.system(size: 17, weight: .regular))
+                            .font(.system(.headline))
+                            .fontWeight(.regular)
                             .foregroundColor(Color("labelColor"))
                             .multilineTextAlignment(.leading)
                     }

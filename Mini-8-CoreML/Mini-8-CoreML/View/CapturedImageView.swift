@@ -25,31 +25,46 @@ struct CapturedImageView: View {
                 //nome da doença e acurácia
                 HStack(alignment: .center){
                     Text(vm.classification)
-                        .font(.system(size: 22, weight: .semibold))
+                        .font(.system(.title2))
+                        .fontWeight(.semibold)
                         .foregroundColor(Color("labelColor"))
                     
                     Spacer()
                     
-                    Text("\(vm.accuracy)%")
-                        .font(.system(size: 22, weight: .semibold))
-                        .foregroundColor(Color("labelColor"))
+                    VStack(alignment: .trailing, spacing: -2){
+                        Text("\(vm.accuracy)%")
+                            .font(.system(.title2))
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color("labelColor"))
+                        
+                        Text("confidence")
+                            .font(.system(.headline))
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color("labelColor"))
+
+                    }
                     
                     ZStack(alignment: .bottom){
                         Image(systemName: "pawprint.fill")
-                            .frame(width: 22, height: vm.cgAccuracy * 0.22, alignment: .bottom)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 33, height: vm.cgAccuracy * 0.33, alignment: .bottom)
                             .clipped()
                             .fontWeight(.semibold)
                             .foregroundStyle(Color("labelColor"))
 
                         
                         Image(systemName: "pawprint")
-                            .frame(width: 22, height: 22)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 33, height: 33, alignment: .bottom)
                             .clipped()
                             .fontWeight(.semibold)
                             .foregroundStyle(Color("labelColor"))
                     }
                     
                 }
+                .padding(.bottom)
                 
                 Divider()
                     .background(Color("labelColor"))
@@ -57,11 +72,13 @@ struct CapturedImageView: View {
                     VStack(alignment: .leading){
                         //descrição
                         Text("description")
-                            .font(.system(size: 20, weight: .semibold))
+                            .font(.system(.title3))
+                            .fontWeight(.semibold)
                             .foregroundColor(Color("labelColor"))
                             .padding(.vertical)
                         Text(vm.description)
-                            .font(.system(size: 17, weight: .regular))
+                            .font(.headline)
+                            .fontWeight(.regular)
                             .foregroundColor(Color("labelColor"))
                             .frame(width: screenSize.width * 0.9, alignment: .topLeading)
                             .lineLimit(expanded ? nil : 5)
@@ -82,12 +99,14 @@ struct CapturedImageView: View {
                         
                         //recomendações
                         Text("recommendation")
-                            .font(.system(size: 20, weight: .semibold))
+                            .font(.system(.title3))
+                            .fontWeight(.semibold)
                             .foregroundColor(Color("labelColor"))
                             .padding(.vertical)
                         
                         Text(vm.recommendation)
-                            .font(.system(size: 17, weight: .regular))
+                            .font(.headline)
+                            .fontWeight(.regular)
                             .foregroundColor(Color("labelColor"))
                             .frame(width: screenSize.width * 0.9, alignment: .topLeading)
                             .lineLimit(expanded2 ? nil : 5)
