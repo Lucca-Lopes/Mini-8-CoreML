@@ -9,27 +9,14 @@ import UIKit
 import SwiftUI
 import AVFoundation
 import Vision
-import Combine
 
 protocol GetDataDelegate {
     func getPrediction(prediction: String)
     func getAccuracy(accuracy: String)
-//    func getImage(image: UIImage)
 }
 
-protocol CanTakePhotoDelegate {
-    func setPhoto(canTakePhoto : Bool)
-}
-
-protocol ImageServiceProviding {
-    var imageResultPub: Published<UIImage?>.Publisher { get }
-}
-
-class LiveCamViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, ImageServiceProviding, CanTakePhotoDelegate {
-    var getDataDelegate: GetDataDelegate?
-//    var setPhotoDelegate: CanTakePhotoDelegate?
-    @Published var image: UIImage? = nil
-    var imageResultPub: Published<UIImage?>.Publisher { $image }
+class LiveCamViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, AVCapturePhotoCaptureDelegate,ObservableObject {
+    var delegate: GetDataDelegate?
     private var permissionGranted = false // Flag for permission
     private let captureSession = AVCaptureSession()
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
@@ -41,9 +28,6 @@ class LiveCamViewController: UIViewController, AVCaptureVideoDataOutputSampleBuf
     private var output = AVCapturePhotoOutput()
     var requests = [VNRequest]()
     var detectionLayer: CALayer! = nil
-    
-    //Get image
-    var canTakeImage: Bool = false
     
     override func viewDidLoad() {
         checkPermission()
@@ -57,10 +41,6 @@ class LiveCamViewController: UIViewController, AVCaptureVideoDataOutputSampleBuf
             
             self.captureSession.startRunning()
         }
-    }
-    
-    func setPhoto(canTakePhoto: Bool) {
-        self.canTakeImage = canTakePhoto
     }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -157,15 +137,11 @@ class LiveCamViewController: UIViewController, AVCaptureVideoDataOutputSampleBuf
 
 struct HostedViewController: UIViewControllerRepresentable, GetDataDelegate {
     @EnvironmentObject var vm: ClassificationViewModel
-    var viewController: LiveCamViewController?
-    private var subscribers: [AnyCancellable] = []
     
     func getPrediction(prediction: String) {
         var text = prediction.replacingCharacters(in: prediction.startIndex...prediction.firstIndex(of: "\"")!, with: "")
         text = String(text.dropLast(1))
-        vm.classification = vm.adequateClassification(classification: text)
-        vm.description = vm.updateDescription(classification: text)
-        vm.recommendation = vm.updateRecomendation(classification: text)
+        vm.classification = LocalizedStringKey(text)
     }
     
     func getAccuracy(accuracy: String) {
@@ -178,11 +154,7 @@ struct HostedViewController: UIViewControllerRepresentable, GetDataDelegate {
     
     func makeUIViewController(context: Context) -> UIViewController {
         let viewController = LiveCamViewController()
-        viewController.getDataDelegate = self
-        vm.getImageDelegate = viewController.self
-        vm.canTakeImageDelegate = viewController.self
-        vm.subscribeImage()
-        
+        viewController.delegate = self
         return viewController
         }
 

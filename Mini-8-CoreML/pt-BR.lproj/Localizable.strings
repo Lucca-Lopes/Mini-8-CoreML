@@ -120,8 +120,3 @@ Esta política é efectiva a partir de 2023-11-28
 "next" = "Próximo";
 
 "cameraAccess" = "Ao conceder permissão para usar a câmera, o aplicativo será capaz de verificar possíveis doenças de pele de um cachorro";
-
-"confidence" = "Certeza";
-"dataset" = "Fonte dos dados";
-
-"datasetText" = "O conjunto de imagens utilizado na construção desse aplicativo advém do dataset público disponibilizado no site Roboflow e pode ser encontrado no seguinte link: ";

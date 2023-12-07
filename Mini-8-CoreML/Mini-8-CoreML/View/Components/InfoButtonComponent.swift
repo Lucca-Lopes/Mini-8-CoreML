@@ -27,8 +27,8 @@ struct InfoButtonComponent: View {
                         .padding(.trailing)
                     Text(title)
                 }
-                .font(.system(.headline))
-                .foregroundStyle(Color("labelColor"))
+                .font(.system(size: 18, weight: .semibold))
+                .foregroundColor(Color("labelColor"))
                 .frame(width: screenSize.width * 0.65 , height: screenSize.height * 0.08, alignment: .leading)
             }
         }

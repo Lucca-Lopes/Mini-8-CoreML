@@ -1,9 +1,0 @@
-/* 
-  InfoPlist.strings
-  Mini-8-CoreML
-
-  Created by Aline Reis Silva on 30/11/23.
-  
-*/
-
-"NSCameraUsageDescription" = "Ao conceder permissão para usar a câmera, o aplicativo será capaz de verificar possíveis doenças de pele de um cachorro";

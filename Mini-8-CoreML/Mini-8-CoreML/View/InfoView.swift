@@ -10,11 +10,11 @@ import SwiftUI
 struct InfoView: View {
     @Environment (\.screenSize) var screenSize
     //recebe o título do botão
-    var infoTitle: [LocalizedStringKey] = ["about", "diseases", "privacy", "dataset"]
+    var infoTitle: [LocalizedStringKey] = ["about", "diseases", "privacy"]
     //recebe o ícone do botão
-    var infoIcon: [String] = ["info", "list.bullet.clipboard", "lock", "photo.stack"]
+    var infoIcon: [String] = ["info", "list.bullet.clipboard", "lock"]
     //recebe o texto de cada view
-    var infoText: [LocalizedStringKey] = ["aboutText", "diseasesText", "privacyText", "datasetText"]
+    var infoText: [LocalizedStringKey] = ["aboutText", "diseasesText", "privacyText"]
     
     var body: some View {
         VStack(spacing: 30){
