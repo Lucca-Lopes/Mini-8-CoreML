@@ -50,9 +50,8 @@ struct LiveCamView: View {
                    
                 }
                 
-            } .ignoresSafeArea()
-            
+            }            
         }
-           
+            .ignoresSafeArea()
     }
-
+}

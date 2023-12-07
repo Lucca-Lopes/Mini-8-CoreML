@@ -12,10 +12,7 @@ struct CapturedImageView: View {
     @State var expanded2: Bool = false
         
     var body: some View {
-        
-        
         VStack{
-            
             Image(uiImage: (vm.importedImage) ?? UIImage(named: "cachorro")!)
                 .resizable()
                 .scaledToFill()
@@ -32,11 +29,20 @@ struct CapturedImageView: View {
                     
                     Spacer()
                     
-                    Text("\(vm.accuracy)%")
-                        .font(.system(size: 22, weight: .semibold))
-                        .foregroundColor(Color("labelColor"))
-                        .accessibilityLabel("\(vm.accuracy) de acurácia")
-                    
+                    VStack(alignment: .trailing, spacing: -2){
+                        Text("\(vm.accuracy)%")
+                            .font(.system(.title2))
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color("labelColor"))
+                            .accessibilityLabel("\(vm.accuracy) de acurácia")
+                        
+                        Text("confidence")
+                            .font(.system(.headline))
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color("labelColor"))
+                            .accessibilityLabel("\(vm.accuracy) de acurácia")
+
+                    }                    
                     
                     Image(systemName: "pawprint")
                         .font(.system(size: 22, weight: .semibold))
@@ -59,24 +65,28 @@ struct CapturedImageView: View {
                             .foregroundColor(Color("labelColor"))
                             .frame(width: screenSize.width * 0.9, alignment: .topLeading)
                             .lineLimit(expanded ? nil : 5)
-                            .accessibilityAddTraits(.isHeader)
-                        
-                        //botão para expandir
-                        Button{
-                            expanded.toggle()
-                        } label: {
-                            Text(expanded ? "readLess" : "readMore")
+
+                        if vm.description == "healthyDescription"{
+                            
+                        } else if vm.description == "skinLesionDescription"{
+                        } else {
+                            //botão para expandir
+                            Button{
+                                expanded.toggle()
+                            } label: {
+                                Text(expanded ? "readLess" : "readMore")
+                            }
+                            .foregroundStyle(Color("AccentColor"))
+                            .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
                         }
                         .foregroundStyle(Color("AccentColor"))
                         .frame(width: screenSize.width * 0.9, alignment: .bottomTrailing)
-                        
                         
                         //recomendações
                         Text("recommendation")
                             .font(.system(size: 20, weight: .semibold))
                             .foregroundColor(Color("labelColor"))
                             .padding(.vertical)
-                            .accessibilityAddTraits(.isHeader)
                         
                         Text(vm.recommendation)
                             .font(.system(size: 17, weight: .regular))
